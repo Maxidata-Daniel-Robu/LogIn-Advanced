@@ -1,0 +1,53 @@
+C:\Users\ROBDAI\source\repos\test\test\obj\Debug\net8.0-windows\Login Page.baml
+C:\Users\ROBDAI\source\repos\test\test\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\ROBDAI\source\repos\test\test\obj\Debug\net8.0-windows\RegisterPage.baml
+C:\Users\ROBDAI\source\repos\test\test\obj\Debug\net8.0-windows\Login Page.g.cs
+C:\Users\ROBDAI\source\repos\test\test\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\ROBDAI\source\repos\test\test\obj\Debug\net8.0-windows\RegisterPage.g.cs
+C:\Users\ROBDAI\source\repos\test\test\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\ROBDAI\source\repos\test\test\obj\Debug\net8.0-windows\test_MarkupCompile.cache
+C:\Users\ROBDAI\source\repos\test\test\obj\Debug\net8.0-windows\test.g.resources
+C:\Users\ROBDAI\source\repos\test\test\obj\Debug\net8.0-windows\test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ROBDAI\source\repos\test\test\obj\Debug\net8.0-windows\test.AssemblyInfoInputs.cache
+C:\Users\ROBDAI\source\repos\test\test\obj\Debug\net8.0-windows\test.AssemblyInfo.cs
+C:\Users\ROBDAI\source\repos\test\test\obj\Debug\net8.0-windows\test.csproj.CoreCompileInputs.cache
+C:\Users\ROBDAI\source\repos\test\test\bin\Debug\net8.0-windows\test.exe
+C:\Users\ROBDAI\source\repos\test\test\bin\Debug\net8.0-windows\test.deps.json
+C:\Users\ROBDAI\source\repos\test\test\bin\Debug\net8.0-windows\test.runtimeconfig.json
+C:\Users\ROBDAI\source\repos\test\test\bin\Debug\net8.0-windows\test.dll
+C:\Users\ROBDAI\source\repos\test\test\bin\Debug\net8.0-windows\test.pdb
+C:\Users\ROBDAI\source\repos\test\test\obj\Debug\net8.0-windows\test.dll
+C:\Users\ROBDAI\source\repos\test\test\obj\Debug\net8.0-windows\refint\test.dll
+C:\Users\ROBDAI\source\repos\test\test\obj\Debug\net8.0-windows\test.pdb
+C:\Users\ROBDAI\source\repos\test\test\obj\Debug\net8.0-windows\test.genruntimeconfig.cache
+C:\Users\ROBDAI\source\repos\test\test\obj\Debug\net8.0-windows\ref\test.dll
+C:\Users\ROBDAI\source\repos\test\test\obj\Debug\net8.0-windows\WelcomePage.baml
+C:\Users\ROBDAI\source\repos\test\test\obj\Debug\net8.0-windows\WelcomePage.g.cs
+C:\GitHub\Daniel\LogIn Advanced\test\obj\Debug\net8.0-windows\MainWindow.baml
+C:\GitHub\Daniel\LogIn Advanced\test\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\GitHub\Daniel\LogIn Advanced\test\obj\Debug\net8.0-windows\App.g.cs
+C:\GitHub\Daniel\LogIn Advanced\test\obj\Debug\net8.0-windows\test_MarkupCompile.cache
+C:\GitHub\Daniel\LogIn Advanced\test\obj\Debug\net8.0-windows\test.g.resources
+C:\GitHub\Daniel\LogIn Advanced\test\obj\Debug\net8.0-windows\test.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub\Daniel\LogIn Advanced\test\obj\Debug\net8.0-windows\test.AssemblyInfoInputs.cache
+C:\GitHub\Daniel\LogIn Advanced\test\obj\Debug\net8.0-windows\test.AssemblyInfo.cs
+C:\GitHub\Daniel\LogIn Advanced\test\obj\Debug\net8.0-windows\test.csproj.CoreCompileInputs.cache
+C:\GitHub\Daniel\LogIn Advanced\test\obj\Debug\net8.0-windows\test.sourcelink.json
+C:\GitHub\Daniel\LogIn Advanced\test\obj\Debug\net8.0-windows\test.dll
+C:\GitHub\Daniel\LogIn Advanced\test\obj\Debug\net8.0-windows\refint\test.dll
+C:\GitHub\Daniel\LogIn Advanced\test\obj\Debug\net8.0-windows\test.pdb
+C:\GitHub\Daniel\LogIn Advanced\test\bin\Debug\net8.0-windows\test.exe
+C:\GitHub\Daniel\LogIn Advanced\test\bin\Debug\net8.0-windows\test.deps.json
+C:\GitHub\Daniel\LogIn Advanced\test\bin\Debug\net8.0-windows\test.runtimeconfig.json
+C:\GitHub\Daniel\LogIn Advanced\test\bin\Debug\net8.0-windows\test.dll
+C:\GitHub\Daniel\LogIn Advanced\test\bin\Debug\net8.0-windows\test.pdb
+C:\GitHub\Daniel\LogIn Advanced\test\obj\Debug\net8.0-windows\test.genruntimeconfig.cache
+C:\GitHub\Daniel\LogIn Advanced\test\obj\Debug\net8.0-windows\ref\test.dll
+C:\GitHub\Daniel\LogIn Advanced\test\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\GitHub\Daniel\LogIn Advanced\test\obj\Debug\net8.0-windows\test_MarkupCompile.lref
+C:\GitHub\Daniel\LogIn Advanced\test\obj\Debug\net8.0-windows\WelcomePage\WelcomePage.baml
+C:\GitHub\Daniel\LogIn Advanced\test\obj\Debug\net8.0-windows\LogInPage\Login Page.g.cs
+C:\GitHub\Daniel\LogIn Advanced\test\obj\Debug\net8.0-windows\RegisterPage\RegisterPage.g.cs
+C:\GitHub\Daniel\LogIn Advanced\test\obj\Debug\net8.0-windows\WelcomePage\WelcomePage.g.cs
+C:\GitHub\Daniel\LogIn Advanced\test\obj\Debug\net8.0-windows\LogInPage\Login Page.baml
+C:\GitHub\Daniel\LogIn Advanced\test\obj\Debug\net8.0-windows\RegisterPage\RegisterPage.baml

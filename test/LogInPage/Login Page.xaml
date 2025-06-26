@@ -1,0 +1,77 @@
+﻿<Page x:Class="test.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:vm="clr-namespace:test.ViewModels"
+      xmlns:helpers="clr-namespace:test.Helpers"
+      Title="LoginPage">
+
+    <Page.DataContext>
+        <vm:LoginViewModel/>
+    </Page.DataContext>
+
+    <Grid Background="#FF1E1E1E">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Margin="20">
+
+            <!-- Title -->
+            <TextBlock Text="Login"
+                       FontSize="28"
+                       Foreground="White"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,20"/>
+
+            <!-- Username -->
+            <TextBlock Text="Username" Foreground="LightGray" Margin="5,0,0,2"/>
+            <TextBox Height="36"
+                     Margin="0,0,0,10"
+                     FontSize="16"
+                     Background="#FF2E2E2E"
+                     Foreground="White"
+                     Padding="5,6"
+                     Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <!-- Password -->
+            <TextBlock Text="Password" Foreground="LightGray" Margin="5,0,0,2"/>
+            <PasswordBox
+            helpers:PasswordBoxHelper.AttachBehavior="True"
+            helpers:PasswordBoxHelper.BoundPassword="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            Height="36"
+            Margin="0,0,0,10"
+            FontSize="16"
+            Background="#FF2E2E2E"
+            Foreground="White"
+            Padding="5,6" />
+
+
+            <!-- Login Button -->
+            <Button Content="Login"
+                    Width="200"
+                    Height="40"
+                    Background="#FF007ACC"
+                    Foreground="White"
+                    FontSize="16"
+                    Margin="0,10,0,10"
+                    Command="{Binding LoginCommand}" />
+
+            <!-- Status Message -->
+            <TextBlock x:Name="StatusTextBlock"
+                       Text="{Binding StatusMessage}"
+                       Foreground="{Binding StatusColor}"
+                       FontWeight="Bold"
+                       Margin="0,10,0,0"
+                       TextWrapping="Wrap"
+                       HorizontalAlignment="Center"
+                       Opacity="{Binding StatusOpacity}"/>
+
+            <!-- Register Link -->
+            <TextBlock HorizontalAlignment="Center" Foreground="White" Margin="0,20,0,0">
+                <Hyperlink Command="{Binding NavigateToRegisterCommand}">Don't have an account?</Hyperlink>
+                <Run Text="Register here"
+                     Foreground="#FF00AEEF"
+                     FontWeight="Bold"
+                     TextDecorations="Underline"
+                     Cursor="Hand"
+                     MouseLeftButtonDown="RegisterLink_Click" />
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+</Page>
