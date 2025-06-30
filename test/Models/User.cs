@@ -1,15 +1,18 @@
-﻿namespace test.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace test.Models
 {
     public class User
     {
-        public string Username { get; set; } = string.Empty;
-        public string Password { get; set; } = string.Empty;
-        public User() { }
+        [Key]
+        public int Id { get; set; } // Auto-increment primary key
 
-        public User(string username, string password)
-        {
-            Username = username;
-            Password = password;
-        }
+        [Required]
+        [MaxLength(50)]
+        public string Username { get; set; } = string.Empty;
+
+        [Required]
+        [MaxLength(100)]
+        public string Password { get; set; } = string.Empty;
     }
 }

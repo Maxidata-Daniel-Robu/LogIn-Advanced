@@ -3,7 +3,6 @@ using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using test.Commands;
@@ -84,36 +83,43 @@ namespace test.ViewModels
                 return;
             }
 
-            var users = UserStorage.LoadUsers();
-            if (users.Any(u => u.Username.Equals(Username, StringComparison.OrdinalIgnoreCase)))
+            if (App.UserDataService != null)
             {
-                StatusMessage = "Username already taken.";
-                return;
+                var userService = App.UserDataService;
+
+                if (await userService.UserExistsAsync(Username))
+                {
+                    StatusMessage = "Username already taken.";
+                    return;
+                }
+
+                var hashedPassword = BCrypt.Net.BCrypt.HashPassword(Password);
+                var newUser = new User { Username = Username, Password = hashedPassword };
+
+                await userService.AddUserAsync(newUser);
+
+                StatusMessage = "Registration successful!";
+                StatusColor = Brushes.Green;
+
+                await Task.Delay(500);
+                MainWindow.AppNavigationService.NavigateTo("Login");
             }
-
-            users.Add(new User(Username, Password));
-            UserStorage.SaveUsers(users);
-
-            StatusMessage = "Registration successful!";
-            StatusColor = Brushes.Green;
-
-            await Task.Delay(500);
-            MainWindow.AppNavigationService.NavigateTo("Login");
+            else
+            {
+                StatusMessage = "User service is unavailable.";
+            }
         }
 
         private bool IsPasswordValid(string password)
         {
-            if (string.IsNullOrWhiteSpace(password))
-                return false;
-
-            bool hasUpper = password.Any(char.IsUpper);
-            bool hasDigit = password.Any(char.IsDigit);
-            bool hasSpecial = password.Any(c => !char.IsLetterOrDigit(c));
-
-            return hasUpper && hasDigit && hasSpecial;
+            return !string.IsNullOrWhiteSpace(password) &&
+                   password.Any(char.IsUpper) &&
+                   password.Any(char.IsDigit) &&
+                   password.Any(c => !char.IsLetterOrDigit(c));
         }
 
         private bool CanExecuteRegister(object? parameter) => true;
+
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string? name = null)
         {

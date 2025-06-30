@@ -9,13 +9,27 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="UserMigrationTool.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DesignDataWithDesignTimeCreatableTypes Include="Utilities\UserMigrationTool.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Models\UserStorage.cs">
       <Generator>MSBuild:Compile</Generator>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\" />
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
 </Project>

@@ -46,7 +46,16 @@
                          Background="#FF2E2E2E"
                          Foreground="White"
                          Padding="5,6"
-                         PasswordChanged="ConfirmPasswordBox_PasswordChanged"/>
+                         PasswordChanged="ConfirmPasswordBox_PasswordChanged" RenderTransformOrigin="0.5,0.5" Password="">
+                <PasswordBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-360.115"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </PasswordBox.RenderTransform>
+            </PasswordBox>
 
             <!-- Register Button -->
             <Button Content="Register"

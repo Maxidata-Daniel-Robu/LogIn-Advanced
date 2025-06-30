@@ -1,58 +1,51 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.Json;
+﻿using System.ComponentModel;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using test.Data;  // Your DbContext namespace
+using test.Models;
 
 namespace test.Models
 {
-    public class UserStorage
+    // Interface declaration for IUserStorage
+    //do it in a file of its own 
+    public interface IUserStorage : INotifyPropertyChanged
     {
-        private static string GetUserFilePath()
+        bool UserExists(string username);
+        User? ValidateUser(string username, string password);
+        void AddUser(User newUser);
+    }
+
+    // UserStorage implementation using EF Core
+    public class UserStorage : IUserStorage
+    {
+        private readonly AppDbContext _dbContext;
+
+        public event PropertyChangedEventHandler? PropertyChanged;
+
+        public UserStorage(AppDbContext dbContext)
         {
-            // Navigate from bin/debug/net8.0-windows/ up to project root
-            string projectRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\"));
-            string dataDir = Path.Combine(projectRoot, "Data");
-
-            if (!Directory.Exists(dataDir))
-                Directory.CreateDirectory(dataDir);
-
-            return Path.Combine(dataDir, "user.json");
+            _dbContext = dbContext;
         }
 
-        public static List<User> LoadUsers()
+        public bool UserExists(string username)
         {
-            string path = GetUserFilePath();
-            if (!File.Exists(path))
-                return new List<User>();
-
-            string json = File.ReadAllText(path);
-            return JsonSerializer.Deserialize<List<User>>(json) ?? new List<User>();
+            return _dbContext.Users.Any(u => u.Username == username);
         }
 
-        public static void SaveUsers(List<User> users)
+        public User? ValidateUser(string username, string password)
         {
-            string path = GetUserFilePath();
-            string json = JsonSerializer.Serialize(users, new JsonSerializerOptions { WriteIndented = true });
-            File.WriteAllText(path, json);
+            // TODO: Ideally verify hashed password here
+            return _dbContext.Users.FirstOrDefault(u => u.Username == username && u.Password == password);
         }
 
-        public static void AddUser(User newUser)
+        public void AddUser(User newUser)
         {
-            var users = LoadUsers();
-            users.Add(newUser);
-            SaveUsers(users);
+            _dbContext.Users.Add(newUser);
+            _dbContext.SaveChanges();
+            OnPropertyChanged(nameof(UserExists));
         }
 
-        public static User? GetUser(string username, string password)
-        {
-            var users = LoadUsers();
-            return users.Find(u => u.Username == username && u.Password == password);
-        }
-
-        public static bool IsUsernameTaken(string username)
-        {
-            var users = LoadUsers();
-            return users.Exists(u => u.Username.Equals(username, StringComparison.OrdinalIgnoreCase));
-        }
+        private void OnPropertyChanged(string propertyName)
+            => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 }

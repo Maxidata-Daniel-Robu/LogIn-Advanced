@@ -1,6 +1,5 @@
 ﻿using System.Windows.Input;
 using test.Commands;
-using test.Services;
 
 namespace test.ViewModels
 {
