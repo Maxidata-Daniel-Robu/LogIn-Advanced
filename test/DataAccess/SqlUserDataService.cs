@@ -1,45 +1,71 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
 using test.Data;
 using test.Models;
 using test.Services;
 
-namespace test.Services
+namespace test.DataAccess
 {
     public class SqlUserDataService : IUserDataService
     {
-        private readonly AppDbContext _context;
+        private readonly IDbContextFactory<AppDbContext> _contextFactory;
 
-        public SqlUserDataService(AppDbContext context)
+        public SqlUserDataService(IDbContextFactory<AppDbContext> contextFactory)
         {
-            _context = context;
-        }
-
-        public async Task<List<User>> GetAllUsersAsync()
-        {
-            return await _context.Users.ToListAsync();
-        }
-
-        public async Task<User> GetUserByUsernameAsync(string username)
-        {
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == username);
-            if (user == null)
-                throw new Exception("User not found.");
-
-            return user;
+            _contextFactory = contextFactory;
         }
 
         public async Task AddUserAsync(User user)
         {
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
+            await using var context = _contextFactory.CreateDbContext();
+            context.Users.Add(user);
+            await context.SaveChangesAsync();
         }
 
         public async Task<bool> UserExistsAsync(string username)
         {
-            return await _context.Users.AnyAsync(u => u.Username == username);
+            await using var context = _contextFactory.CreateDbContext();
+            return await context.Users.AnyAsync(u => u.Username.ToLower() == username.ToLower());
+        }
+
+        public async Task<User?> GetUserByUsernameAsync(string username)
+        {
+            await using var context = _contextFactory.CreateDbContext();
+            return await context.Users.FirstOrDefaultAsync(u => u.Username.ToLower() == username.ToLower());
+        }
+
+        public async Task<List<User>> GetAllUsersAsync()
+        {
+            await using var context = _contextFactory.CreateDbContext();
+            return await context.Users.ToListAsync();
+        }
+
+        public async Task UpdateUserAsync(User user)
+        {
+            await using var context = _contextFactory.CreateDbContext();
+            context.Users.Update(user);
+            await context.SaveChangesAsync();
+        }
+
+        public async Task DeleteUserAsync(string username)
+        {
+            await using var context = _contextFactory.CreateDbContext();
+            var user = await context.Users.FirstOrDefaultAsync(u => u.Username.ToLower() == username.ToLower());
+            if (user != null)
+            {
+                context.Users.Remove(user);
+                await context.SaveChangesAsync();
+            }
+        }
+
+        public async Task<bool> VerifyUserPasswordAsync(string username, string password)
+        {
+            await using var context = _contextFactory.CreateDbContext();
+            var user = await context.Users.FirstOrDefaultAsync(u => u.Username.ToLower() == username.ToLower());
+            return user != null && user.Password == password;
         }
     }
 }

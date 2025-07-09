@@ -5,7 +5,7 @@ namespace test.Models
     public class User
     {
         [Key]
-        public int Id { get; set; } // Auto-increment primary key
+        public int Id { get; set; }
 
         [Required]
         [MaxLength(50)]

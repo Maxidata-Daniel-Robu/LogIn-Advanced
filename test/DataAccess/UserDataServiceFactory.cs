@@ -1,25 +1,14 @@
-﻿using test;
+﻿using Microsoft.EntityFrameworkCore;
 using test.Data;
-using test.Models;
+using test.Services;
 
-namespace test.Services
+namespace test.DataAccess
 {
-    public enum StorageType
-    {
-        Json,
-        Sql
-    }
-
     public static class UserDataServiceFactory
     {
-        public static IUserDataService Create(StorageType type, AppDbContext dbContext)
+        public static IUserDataService CreateSqlService(IDbContextFactory<AppDbContext> contextFactory)
         {
-            return type switch
-            {
-                StorageType.Json => new JsonUserDataService(),
-                StorageType.Sql => new SqlUserDataService(dbContext),
-                _ => throw new ArgumentOutOfRangeException(nameof(type), "Unsupported storage type")
-            };
+            return new SqlUserDataService(contextFactory);
         }
     }
 }

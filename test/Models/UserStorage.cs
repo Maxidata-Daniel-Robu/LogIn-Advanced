@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Linq;
+using System.IO;
 using Microsoft.EntityFrameworkCore;
 using test.Data;  // Your DbContext namespace
 using test.Models;
@@ -47,5 +48,16 @@ namespace test.Models
 
         private void OnPropertyChanged(string propertyName)
             => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+
+        private static string GetUserFilePath()
+        {
+            string projectRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\")); 
+            string dataDir = Path.Combine(projectRoot, "Data");
+
+            if (!Directory.Exists(dataDir))
+                Directory.CreateDirectory(dataDir);
+
+            return Path.Combine(dataDir, "user.json"); // Always use "user.json"
+        }
     }
 }

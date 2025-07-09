@@ -5,8 +5,10 @@ using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows.Media;
+using Microsoft.Extensions.DependencyInjection;
 using test.Commands;
 using test.Models;
+using test.Services;
 
 namespace test.ViewModels
 {
@@ -53,14 +55,14 @@ namespace test.ViewModels
 
         public RegisterViewModel()
         {
-            RegisterCommand = new RelayCommand(ExecuteRegister, CanExecuteRegister);
+            RegisterCommand = new RelayCommand(async param => await ExecuteRegisterAsync(param), CanExecuteRegister);
             NavigateToLoginCommand = new RelayCommand(_ =>
             {
                 MainWindow.AppNavigationService.NavigateTo("Login");
             });
         }
 
-        private async void ExecuteRegister(object? parameter)
+        private async Task ExecuteRegisterAsync(object? parameter)
         {
             StatusColor = Brushes.Red;
             StatusMessage = "";
@@ -83,20 +85,26 @@ namespace test.ViewModels
                 return;
             }
 
-            if (App.UserDataService != null)
+            // ✅ FIXED: get the user data service via DI
+            var userDataService = App.ServiceProvider?.GetRequiredService<IUserDataService>();
+            if (userDataService == null)
             {
-                var userService = App.UserDataService;
+                StatusMessage = "User service is unavailable.";
+                return;
+            }
 
-                if (await userService.UserExistsAsync(Username))
-                {
-                    StatusMessage = "Username already taken.";
-                    return;
-                }
+            if (await userDataService.UserExistsAsync(Username))
+            {
+                StatusMessage = "Username already taken.";
+                return;
+            }
 
-                var hashedPassword = BCrypt.Net.BCrypt.HashPassword(Password);
-                var newUser = new User { Username = Username, Password = hashedPassword };
+            var hashedPassword = BCrypt.Net.BCrypt.HashPassword(Password);
+            var newUser = new User { Username = Username, Password = hashedPassword };
 
-                await userService.AddUserAsync(newUser);
+            try
+            {
+                await userDataService.AddUserAsync(newUser);
 
                 StatusMessage = "Registration successful!";
                 StatusColor = Brushes.Green;
@@ -104,13 +112,15 @@ namespace test.ViewModels
                 await Task.Delay(500);
                 MainWindow.AppNavigationService.NavigateTo("Login");
             }
-            else
+            catch (Exception ex)
             {
-                StatusMessage = "User service is unavailable.";
+                StatusMessage = $"Registration failed: {ex.Message}";
             }
+
+            await Task.Delay(1); // ensures async signature is valid
         }
 
-        private bool IsPasswordValid(string password)
+        private static bool IsPasswordValid(string password)
         {
             return !string.IsNullOrWhiteSpace(password) &&
                    password.Any(char.IsUpper) &&
@@ -118,7 +128,7 @@ namespace test.ViewModels
                    password.Any(c => !char.IsLetterOrDigit(c));
         }
 
-        private bool CanExecuteRegister(object? parameter) => true;
+        private bool CanExecuteRegister(object? _) => true;
 
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string? name = null)

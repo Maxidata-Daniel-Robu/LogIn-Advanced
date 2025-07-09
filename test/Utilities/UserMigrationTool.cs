@@ -1,18 +1,24 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Newtonsoft.Json;
-using test.Models; // Your User model namespace
-using test.Data;   // Your DbContext namespace
+using test.Models;
+using test.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace test.Utilities
 {
     public static class UserMigrationTool
     {
-        public static void ImportJsonUsersOnce()
+        private static bool _hasRun = false;
+
+        public static void ImportJsonUsersOnce(DbContextOptions<AppDbContext> options)
         {
-            // Path to your users.json file inside the Data folder of the output directory
-            string jsonPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "users.json");
+            if (_hasRun) return;
+            _hasRun = true;
+
+            string jsonPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "user.json");
 
             if (!File.Exists(jsonPath))
                 return;
@@ -23,13 +29,17 @@ namespace test.Utilities
             if (jsonUsers == null || jsonUsers.Count == 0)
                 return;
 
-            using var db = new AppDbContext();
+            using var db = new AppDbContext(options);
 
             foreach (var user in jsonUsers)
             {
-                // Only add if username doesn't already exist in DB
+                user.Username = user.Username.Trim().ToLower();
+
                 if (!db.Users.Any(u => u.Username == user.Username))
                 {
+                    if (!user.Password.StartsWith("$2"))
+                        user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
+
                     db.Users.Add(new User
                     {
                         Username = user.Username,

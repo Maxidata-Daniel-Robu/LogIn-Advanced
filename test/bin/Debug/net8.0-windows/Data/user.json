@@ -1,34 +1,82 @@
 [
   {
+    "Id": 0,
     "Username": "Daniel",
     "Password": "Dreagau2022."
   },
   {
-    "Username": "daniel",
-    "Password": "Lol123."
-  },
-  {
+    "Id": 0,
     "Username": "daniel34",
     "Password": "E123."
   },
   {
+    "Id": 0,
     "Username": "Amigo",
     "Password": "D1234."
   },
   {
+    "Id": 0,
     "Username": "DAniiro",
     "Password": "Dreagau2022."
   },
   {
+    "Id": 0,
     "Username": "hello.world",
     "Password": "Dreagau2022."
   },
   {
+    "Id": 0,
     "Username": "qwertyuiop",
     "Password": "Dreagau2022."
   },
   {
+    "Id": 0,
     "Username": "Daniel.Robu",
     "Password": "Dreagau2022."
+  },
+  {
+    "Id": 0,
+    "Username": "User04",
+    "Password": "$2a$11$NONwHIivswxQKAxtUDdugOCU6zTknaxX8cWMMLOVvhvmcn8lXSROO"
+  },
+  {
+    "Id": 0,
+    "Username": "Simone04",
+    "Password": "$2a$11$.iq/OC8mdL0WgjxKeltXr.1QpmahXuJ5dGPmjNhZT0s8ZOmUF0dLa"
+  },
+  {
+    "Id": 0,
+    "Username": "Daniel05",
+    "Password": "$2a$11$8wZBgQJpGjgIdz9WJ5yXQ.DMJeEUwMOghWGGXBjDBU6ycwaViH4w."
+  },
+  {
+    "Id": 0,
+    "Username": "daniel11",
+    "Password": "$2a$11$/N.IQdd/iaP.tAiSgC6.3.2/lWI5Mum8AnBxxZkl/uQiS5.1VNMkO"
+  },
+  {
+    "Id": 0,
+    "Username": "daniiro11",
+    "Password": "$2a$11$c5FPh8R/QJhTRujdyb1qmeldrSWk3b0GbO44znVQiytLR7re/YoXW"
+  },
+  {
+    "Id": 0,
+    "Username": "dreagau2022.",
+    "Password": "$2a$11$2JoALFwEV6rRlzxv/z2BX.gfG3mwWE3Mx8uMF1f1tJnST9qXT.S/6"
+  },
+  {
+    "Id": 0,
+    "Username": "dandadan",
+    "Password": "$2a$11$uULa2aSisdHMiRXr29y7deN0pMgMv2lmkZg4Cm7J1nuyOwgXFzNHq"
+  },
+  {
+    "Id": 0,
+    "Username": "userd",
+    "Password": "$2a$11$xORCffwV88SraF8HurjKXOTseFWjEWj8s3YhPvDGzQUUVKT7quZg."
+  },
+  {
+    "Id": 0,
+    "Username": "andrea04",
+    "Password": "$2a$11$y1eNBKtot06XU9fKJUT5J.A6C..cIknQQovJhol8OXSvNJS5doNCG"
   }
 ]

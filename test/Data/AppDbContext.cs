@@ -5,20 +5,22 @@ namespace test.Data
 {
     public class AppDbContext : DbContext
     {
-        public DbSet<User> Users { get; set; }
+        public DbSet<User> Users => Set<User>();
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public AppDbContext(DbContextOptions<AppDbContext> options)
+            : base(options)
         {
-            optionsBuilder.UseSqlServer(
-                @"Server=(local)\maxidata;Database=UserAuthDB;Trusted_Connection=True;Encrypt=True;TrustServerCertificate=True;");
-
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>()
                 .HasIndex(u => u.Username)
-                .IsUnique(); // Enforce unique usernames
+                .IsUnique();
+
+            modelBuilder.Entity<User>()
+                .Property(u => u.Username)
+                .UseCollation("Latin1_General_CS_AS"); // Case-sensitive
         }
     }
 }

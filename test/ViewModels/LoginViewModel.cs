@@ -5,8 +5,10 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Threading;
+using Microsoft.Extensions.DependencyInjection;
 using test.Commands;
 using test.Models;
+using test.Services;
 
 namespace test.ViewModels
 {
@@ -112,34 +114,48 @@ namespace test.ViewModels
                 return;
             }
 
-            if (App.UserDataService != null)
-            {
-                var user = await App.UserDataService.GetUserByUsernameAsync(Username);
-
-                if (user == null || !BCrypt.Net.BCrypt.Verify(Password, user.Password))
-                {
-                    _loginAttempts++;
-                    StatusMessage = "Invalid username or password.";
-                    StatusColor = Brushes.Red;
-
-                    if (_loginAttempts >= 3)
-                        LoginFinished?.Invoke(this, false);
-
-                    return;
-                }
-
-                StatusMessage = "Login successful!";
-                StatusColor = Brushes.Green;
-                LoginFinished?.Invoke(this, true);
-            }
-            else
+            // Resolve the user data service safely from DI container
+            var userDataService = App.ServiceProvider?.GetRequiredService<IUserDataService>();
+            if (userDataService == null)
             {
                 StatusMessage = "User data service is unavailable.";
                 StatusColor = Brushes.Red;
+                return;
             }
+
+            bool isValid = false;
+
+            try
+            {
+                isValid = await userDataService.VerifyUserPasswordAsync(Username, Password);
+            }
+            catch (Exception ex)
+            {
+                StatusMessage = $"Login failed: {ex.Message}";
+                StatusColor = Brushes.Red;
+                return;
+            }
+
+            if (!isValid)
+            {
+                _loginAttempts++;
+                StatusMessage = "Invalid username or password.";
+                StatusColor = Brushes.Red;
+
+                if (_loginAttempts >= 3)
+                    LoginFinished?.Invoke(this, false);
+
+                return;
+            }
+
+            StatusMessage = "Login successful!";
+            StatusColor = Brushes.Green;
+            LoginFinished?.Invoke(this, true);
+
+            await Task.Delay(1); // keep method async
         }
 
-        private bool CanExecuteLogin(object? parameter) => true;
+        private bool CanExecuteLogin(object? _) => true;
 
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string? name = null)

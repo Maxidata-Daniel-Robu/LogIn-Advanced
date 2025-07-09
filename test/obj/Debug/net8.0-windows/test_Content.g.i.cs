@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("usermigrationtool.cs")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("appsettings.json")]
 
 

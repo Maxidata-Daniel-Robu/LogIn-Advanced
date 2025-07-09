@@ -11,9 +11,6 @@
     <Compile Update="Models\User.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Models\UserStorage.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="WelcomePage\WelcomePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
