@@ -5,7 +5,6 @@ using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows.Media;
-using Microsoft.Extensions.DependencyInjection;
 using test.Commands;
 using test.Models;
 using test.Services;
@@ -55,14 +54,14 @@ namespace test.ViewModels
 
         public RegisterViewModel()
         {
-            RegisterCommand = new RelayCommand(async param => await ExecuteRegisterAsync(param), CanExecuteRegister);
+            RegisterCommand = new RelayCommand(async param => await ExecuteRegisterAsync(), _ => true);
             NavigateToLoginCommand = new RelayCommand(_ =>
             {
                 MainWindow.AppNavigationService.NavigateTo("Login");
             });
         }
 
-        private async Task ExecuteRegisterAsync(object? parameter)
+        private async Task ExecuteRegisterAsync()
         {
             StatusColor = Brushes.Red;
             StatusMessage = "";
@@ -85,30 +84,27 @@ namespace test.ViewModels
                 return;
             }
 
-            // ✅ FIXED: get the user data service via DI
-            var userDataService = App.ServiceProvider?.GetRequiredService<IUserDataService>();
+            var userDataService = App.ServiceProvider?.GetService(typeof(IUserDataService)) as IUserDataService;
             if (userDataService == null)
             {
                 StatusMessage = "User service is unavailable.";
                 return;
             }
 
-            if (await userDataService.UserExistsAsync(Username))
+            if (userDataService.UserExists(Username))
             {
                 StatusMessage = "Username already taken.";
                 return;
             }
 
             var hashedPassword = BCrypt.Net.BCrypt.HashPassword(Password);
-            var newUser = new User { Username = Username, Password = hashedPassword };
+            var newUser = new UserModel { Username = Username, Password = hashedPassword };
 
             try
             {
-                await userDataService.AddUserAsync(newUser);
-
+                userDataService.AddUser(newUser);
                 StatusMessage = "Registration successful!";
                 StatusColor = Brushes.Green;
-
                 await Task.Delay(500);
                 MainWindow.AppNavigationService.NavigateTo("Login");
             }
@@ -117,7 +113,7 @@ namespace test.ViewModels
                 StatusMessage = $"Registration failed: {ex.Message}";
             }
 
-            await Task.Delay(1); // ensures async signature is valid
+            await Task.Delay(1);
         }
 
         private static bool IsPasswordValid(string password)
@@ -127,8 +123,6 @@ namespace test.ViewModels
                    password.Any(char.IsDigit) &&
                    password.Any(c => !char.IsLetterOrDigit(c));
         }
-
-        private bool CanExecuteRegister(object? _) => true;
 
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string? name = null)

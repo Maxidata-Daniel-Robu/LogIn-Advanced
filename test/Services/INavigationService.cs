@@ -8,7 +8,6 @@ namespace test.Services
 {
     public interface INavigationService
     {
-        void NavigateTo(string pageKey);
+        void NavigateTo(string pageName);
     }
 }
-

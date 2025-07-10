@@ -1,13 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.IO;
+using System.Threading.Tasks;
 using System.Windows;
-using test.Data;
-using test.DataAccess;
 using test.Services;
-using test.Utilities;
 
 namespace test
 {
@@ -23,32 +20,30 @@ namespace test
 
             IConfiguration config = builder.Build();
 
-            var serviceCollection = new ServiceCollection();
+            var services = new ServiceCollection();
 
             string storage = config["AppSettings:Storage"] ?? "Json";
             string connectionString = config["AppSettings:ConnectionString"] ?? "";
 
+            // Perform migration if switching to SQL
             if (storage == "Sql")
             {
-                serviceCollection.AddDbContext<AppDbContext>(options =>
-                    options.UseSqlServer(connectionString));
-                serviceCollection.AddScoped<IUserDataService, SqlUserDataService>();
+                string jsonFilePath = Path.Combine(AppContext.BaseDirectory, "Data", "user.json");
+                if (File.Exists(jsonFilePath))
+                {
+                    DataMigrationService.MigrateJsonToSql(jsonFilePath, connectionString);
+                }
             }
-            else
+
+            if (storage == "Manual")
             {
-                serviceCollection.AddScoped<IUserDataService, JsonUserDataService>();
+                // Ensure DB and table exist
+                SqlSchemaInitializer.EnsureDatabaseAndSchemaAsync(connectionString).Wait(); // Synchronous wait for async method
+
+                services.AddSingleton<IUserDataService>(new ManualUserDataService(connectionString));
             }
 
-            serviceCollection.AddSingleton(config);
-
-            ServiceProvider = serviceCollection.BuildServiceProvider();
-
-            if (storage == "Sql")
-            {
-                var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
-                optionsBuilder.UseSqlServer(connectionString);
-                UserMigrationTool.ImportJsonUsersOnce(optionsBuilder.Options);
-            }
+            ServiceProvider = services.BuildServiceProvider();
 
             base.OnStartup(e);
 

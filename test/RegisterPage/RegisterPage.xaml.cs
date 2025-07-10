@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using test.LogInPage; // Required to access Login_Page
 
 namespace test
 {
@@ -28,7 +29,7 @@ namespace test
 
         private void BackToLogin_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new LoginPage());
+            NavigationService?.Navigate(new Login_Page()); // ✅ Correct class name
         }
     }
 }

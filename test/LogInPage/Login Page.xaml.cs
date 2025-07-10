@@ -1,46 +1,37 @@
-﻿// LoginPage.xaml.cs
-using System;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
 using test.ViewModels;
 
-namespace test
+namespace test.LogInPage
 {
-    public partial class LoginPage : Page
+    public partial class Login_Page : Page
     {
         private readonly LoginViewModel _viewModel;
 
-        public LoginPage()
+        public Login_Page()
         {
             InitializeComponent();
-
-            _viewModel = DataContext as LoginViewModel ?? throw new InvalidOperationException("DataContext must be LoginViewModel");
+            _viewModel = new LoginViewModel();
             _viewModel.LoginFinished += ViewModel_LoginFinished;
-
-            this.Unloaded += LoginPage_Unloaded; // Subscribe to Unloaded event
+            DataContext = _viewModel;
         }
 
-        private async void ViewModel_LoginFinished(object? sender, bool isSuccess)
+        private void ViewModel_LoginFinished(object? sender, bool success)
         {
-            await Task.Delay(500);  // wait 0.5 seconds
-
-            // Use the UI Dispatcher to shut down the application on the UI thread
-            Application.Current.Dispatcher.Invoke(() =>
+            if (success)
             {
-                Application.Current.Shutdown();
-            });
+                // Navigate to main or home page after successful login
+                MainWindow.AppNavigationService.NavigateTo("HomePage");
+            }
+            else
+            {
+                // Optional: stay on the page or handle failed login
+            }
         }
 
-        private void LoginPage_Unloaded(object sender, RoutedEventArgs e)
+        private void RegisterLink_Click(object sender, RoutedEventArgs e)
         {
-            _viewModel.LoginFinished -= ViewModel_LoginFinished;
-        }
-
-        private void RegisterLink_Click(object sender, MouseButtonEventArgs e)
-        {
-            NavigationService?.Navigate(new RegisterPage());
+            MainWindow.AppNavigationService.NavigateTo("Register");
         }
     }
 }

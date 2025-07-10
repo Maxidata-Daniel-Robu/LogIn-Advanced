@@ -4,10 +4,7 @@ using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Threading;
-using Microsoft.Extensions.DependencyInjection;
 using test.Commands;
-using test.Models;
 using test.Services;
 
 namespace test.ViewModels
@@ -18,10 +15,6 @@ namespace test.ViewModels
         private string _password = string.Empty;
         private string _statusMessage = string.Empty;
         private Brush _statusColor = Brushes.Red;
-        private int _loginAttempts = 0;
-        private DispatcherTimer? _fadeOutTimer;
-
-        public event EventHandler<bool>? LoginFinished;
 
         public string Username
         {
@@ -38,13 +31,7 @@ namespace test.ViewModels
         public string StatusMessage
         {
             get => _statusMessage;
-            set
-            {
-                _statusMessage = value;
-                OnPropertyChanged();
-                if (!string.IsNullOrEmpty(value)) StartFadeOutTimer();
-                else StopFadeOutTimer();
-            }
+            set { _statusMessage = value; OnPropertyChanged(); }
         }
 
         public Brush StatusColor
@@ -53,109 +40,51 @@ namespace test.ViewModels
             set { _statusColor = value; OnPropertyChanged(); }
         }
 
-        private double _statusOpacity = 1.0;
-        public double StatusOpacity
-        {
-            get => _statusOpacity;
-            set { _statusOpacity = value; OnPropertyChanged(); }
-        }
-
         public ICommand LoginCommand { get; }
-        public ICommand NavigateToRegisterCommand { get; }
+
+        public event EventHandler<bool>? LoginFinished;
 
         public LoginViewModel()
         {
-            LoginCommand = new RelayCommand(async param => await ExecuteLoginAsync(param), CanExecuteLogin);
-            NavigateToRegisterCommand = new RelayCommand(_ =>
-            {
-                MainWindow.AppNavigationService.NavigateTo("Register");
-            });
+            LoginCommand = new RelayCommand(async _ => await ExecuteLoginAsync(), _ => true);
         }
 
-        private void StartFadeOutTimer()
+        private async Task ExecuteLoginAsync()
         {
-            StopFadeOutTimer();
-            _fadeOutTimer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(3) };
-            _fadeOutTimer.Tick += FadeOutTimer_Tick;
-            _fadeOutTimer.Start();
-        }
-
-        private void StopFadeOutTimer()
-        {
-            if (_fadeOutTimer != null)
-            {
-                _fadeOutTimer.Tick -= FadeOutTimer_Tick;
-                _fadeOutTimer.Stop();
-                _fadeOutTimer = null;
-            }
-            StatusOpacity = 1.0;
-        }
-
-        private async void FadeOutTimer_Tick(object? sender, EventArgs e)
-        {
-            _fadeOutTimer?.Stop();
-            for (int i = 0; i <= 20; i++)
-            {
-                StatusOpacity = 1.0 - (double)i / 20;
-                await Task.Delay(100);
-            }
-            StatusMessage = string.Empty;
-            StatusOpacity = 1.0;
-        }
-
-        private async Task ExecuteLoginAsync(object? parameter)
-        {
-            StatusOpacity = 1.0;
+            StatusColor = Brushes.Red;
+            StatusMessage = "";
 
             if (string.IsNullOrWhiteSpace(Username) || string.IsNullOrWhiteSpace(Password))
             {
                 StatusMessage = "Username and password are required.";
-                StatusColor = Brushes.OrangeRed;
+                LoginFinished?.Invoke(this, false);
                 return;
             }
 
-            // Resolve the user data service safely from DI container
-            var userDataService = App.ServiceProvider?.GetRequiredService<IUserDataService>();
+            var userDataService = App.ServiceProvider?.GetService(typeof(IUserDataService)) as IUserDataService;
             if (userDataService == null)
             {
-                StatusMessage = "User data service is unavailable.";
-                StatusColor = Brushes.Red;
+                StatusMessage = "User service unavailable.";
+                LoginFinished?.Invoke(this, false);
                 return;
             }
 
-            bool isValid = false;
+            bool verified = userDataService.VerifyUserPassword(Username, Password);
 
-            try
+            if (verified)
             {
-                isValid = await userDataService.VerifyUserPasswordAsync(Username, Password);
+                StatusMessage = "Login successful.";
+                StatusColor = Brushes.Green;
+                LoginFinished?.Invoke(this, true);
             }
-            catch (Exception ex)
+            else
             {
-                StatusMessage = $"Login failed: {ex.Message}";
-                StatusColor = Brushes.Red;
-                return;
-            }
-
-            if (!isValid)
-            {
-                _loginAttempts++;
-                StatusMessage = "Invalid username or password.";
-                StatusColor = Brushes.Red;
-
-                if (_loginAttempts >= 3)
-                    LoginFinished?.Invoke(this, false);
-
-                return;
+                StatusMessage = "Invalid credentials.";
+                LoginFinished?.Invoke(this, false);
             }
 
-            StatusMessage = "Login successful!";
-            StatusColor = Brushes.Green;
-            LoginFinished?.Invoke(this, true);
-
-            await Task.Delay(1); // keep method async
+            await Task.Delay(1);
         }
-
-        private bool CanExecuteLogin(object? _) => true;
 
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string? name = null)

@@ -8,9 +8,6 @@
     <Compile Update="RegisterPage\RegisterPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Models\User.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="WelcomePage\WelcomePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

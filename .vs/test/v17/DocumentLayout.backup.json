@@ -7,48 +7,32 @@
       "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\services\\inavigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\services\\inavigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\services\\manualuserdataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\services\\manualuserdataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GitHub\\LogIn-Advanced\\test\\bin\\Debug\\net8.0-windows\\test.runtimeconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:test\\bin\\Debug\\net8.0-windows\\test.runtimeconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GitHub\\LogIn-Advanced\\test\\bin\\Debug\\net8.0-windows\\Data\\user.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:test\\bin\\Debug\\net8.0-windows\\Data\\user.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\registerpage\\registerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\registerpage\\registerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\services\\datamigrationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\services\\datamigrationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\dataaccess\\jsonuserdataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\dataaccess\\jsonuserdataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\migrations\\20250627093439_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\migrations\\20250627093439_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\viewmodels\\welcomeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\viewmodels\\welcomeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\test.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\test.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\utilities\\usermigrationtool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\utilities\\usermigrationtool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\services\\sqlschemainitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\services\\sqlschemainitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\services\\navigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -59,40 +43,80 @@
       "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\services\\iuserdataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\services\\inavigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\services\\inavigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\models\\userstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\models\\userstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\dataaccess\\userdataservicefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\dataaccess\\userdataservicefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\dataaccess\\sqluserdataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\dataaccess\\sqluserdataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\data\\designtimedbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\data\\designtimedbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GitHub\\LogIn-Advanced\\test\\Migrations\\20250708123830_SyncModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:test\\Migrations\\20250708123830_SyncModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\welcomepage\\welcomepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\welcomepage\\welcomepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\welcomepage\\welcomepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\welcomepage\\welcomepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\registerpage\\registerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\registerpage\\registerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\registerpage\\registerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\registerpage\\registerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\loginpage\\login page.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\loginpage\\login page.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\loginpage\\login page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\loginpage\\login page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\helpers\\passwordboxhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\helpers\\passwordboxhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GitHub\\LogIn-Advanced\\test\\bin\\Debug\\net8.0-windows\\Data\\user.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:test\\bin\\Debug\\net8.0-windows\\Data\\user.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\viewmodels\\welcomeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\viewmodels\\welcomeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\test.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\test.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GitHub\\LogIn-Advanced\\test\\Migrations\\20250708123830_SyncModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:test\\Migrations\\20250708123830_SyncModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\test.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -116,62 +140,10 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GitHub\\Daniel\\LogIn Advanced\\test\\bin\\Debug\\net8.0-windows\\users.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\helpers\\passwordboxhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\helpers\\passwordboxhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\migrations\\20250627093439_initialcreate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\migrations\\20250627093439_initialcreate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ROBDAI\\AppData\\Local\\Temp\\1d0a2182-2b44-4343-b815-12d355acbdad_FixedLoginProject.zip.dad\\Services\\JsonUserDataService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ROBDAI\\AppData\\Local\\Temp\\95e39a11-54a2-47d2-abe1-eafa8cbb09f3_FixedLoginProject.zip.9f3\\Services\\IUserDataService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\welcomepage\\welcomepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\welcomepage\\welcomepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\loginpage\\login page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\loginpage\\login page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\loginpage\\login page.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\loginpage\\login page.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\welcomepage\\welcomepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\welcomepage\\welcomepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\registerpage\\registerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\registerpage\\registerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\migrations\\20250708130024_syncmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\migrations\\20250708130024_syncmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -191,7 +163,7 @@
               "RelativeDocumentMoniker": "test\\appsettings.json",
               "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\appsettings.json*",
               "RelativeToolTip": "test\\appsettings.json*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-07-01T14:49:43.889Z",
               "IsPinned": true,
@@ -199,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 24,
               "Title": "user.json",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\bin\\Debug\\net8.0-windows\\Data\\user.json",
               "RelativeDocumentMoniker": "test\\bin\\Debug\\net8.0-windows\\Data\\user.json",
@@ -208,18 +180,17 @@
               "ViewState": "AgIAAD8AAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-06-27T14:06:50.31Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "test.runtimeconfig.json",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\bin\\Debug\\net8.0-windows\\test.runtimeconfig.json",
               "RelativeDocumentMoniker": "test\\bin\\Debug\\net8.0-windows\\test.runtimeconfig.json",
-              "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\bin\\Debug\\net8.0-windows\\test.runtimeconfig.json*",
-              "RelativeToolTip": "test\\bin\\Debug\\net8.0-windows\\test.runtimeconfig.json*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAZAAAAAAAAAA==",
+              "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\bin\\Debug\\net8.0-windows\\test.runtimeconfig.json",
+              "RelativeToolTip": "test\\bin\\Debug\\net8.0-windows\\test.runtimeconfig.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-07-08T12:33:37.146Z",
               "IsPinned": true,
@@ -227,20 +198,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "20250708130024_SyncModel.cs",
-              "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Migrations\\20250708130024_SyncModel.cs",
-              "RelativeDocumentMoniker": "test\\Migrations\\20250708130024_SyncModel.cs",
-              "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\Migrations\\20250708130024_SyncModel.cs",
-              "RelativeToolTip": "test\\Migrations\\20250708130024_SyncModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "DataMigrationService.cs",
+              "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Services\\DataMigrationService.cs",
+              "RelativeDocumentMoniker": "test\\Services\\DataMigrationService.cs",
+              "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\Services\\DataMigrationService.cs",
+              "RelativeToolTip": "test\\Services\\DataMigrationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T13:00:25.023Z",
+              "WhenOpened": "2025-07-10T13:37:16.357Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 7,
+              "Title": "SqlSchemaInitializer.cs",
+              "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Services\\SqlSchemaInitializer.cs",
+              "RelativeDocumentMoniker": "test\\Services\\SqlSchemaInitializer.cs",
+              "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\Services\\SqlSchemaInitializer.cs",
+              "RelativeToolTip": "test\\Services\\SqlSchemaInitializer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T08:47:56.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UserModel.cs",
+              "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Models\\UserModel.cs",
+              "RelativeDocumentMoniker": "test\\Models\\UserModel.cs",
+              "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\Models\\UserModel.cs",
+              "RelativeToolTip": "test\\Models\\UserModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T13:06:14.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ManualUserDataService.cs",
+              "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Services\\ManualUserDataService.cs",
+              "RelativeDocumentMoniker": "test\\Services\\ManualUserDataService.cs",
+              "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\Services\\ManualUserDataService.cs",
+              "RelativeToolTip": "test\\Services\\ManualUserDataService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T13:02:01.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IUserDataService.cs",
+              "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Services\\IUserDataService.cs",
+              "RelativeDocumentMoniker": "test\\Services\\IUserDataService.cs",
+              "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\Services\\IUserDataService.cs",
+              "RelativeToolTip": "test\\Services\\IUserDataService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T13:01:45.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
               "Title": "20250708123830_SyncModel.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Migrations\\20250708123830_SyncModel.cs",
               "RelativeDocumentMoniker": "test\\Migrations\\20250708123830_SyncModel.cs",
@@ -251,20 +274,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "DesignTimeDbContextFactory.cs",
-              "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Data\\DesignTimeDbContextFactory.cs",
-              "RelativeDocumentMoniker": "test\\Data\\DesignTimeDbContextFactory.cs",
-              "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\Data\\DesignTimeDbContextFactory.cs",
-              "RelativeToolTip": "test\\Data\\DesignTimeDbContextFactory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T12:38:07.659Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 29,
               "Title": "test.csproj",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\test.csproj",
               "RelativeDocumentMoniker": "test\\test.csproj",
@@ -276,32 +286,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 27,
               "Title": "test",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\test.csproj",
               "RelativeDocumentMoniker": "test\\test.csproj",
               "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\test.csproj",
               "RelativeToolTip": "test\\test.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-07-01T15:04:08.684Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-01T15:04:08.684Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "20250627093439_InitialCreate.Designer.cs",
-              "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Migrations\\20250627093439_InitialCreate.Designer.cs",
-              "RelativeDocumentMoniker": "test\\Migrations\\20250627093439_InitialCreate.Designer.cs",
-              "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\Migrations\\20250627093439_InitialCreate.Designer.cs",
-              "RelativeToolTip": "test\\Migrations\\20250627093439_InitialCreate.Designer.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAawBwAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T13:53:52.052Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 32,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\ROBDAI\\AppData\\Local\\Temp\\ab4c49fb-bcb7-4621-ab6e-bea03bba7c3b_FixedLoginProject.zip.c3b\\Models\\User.cs",
               "RelativeDocumentMoniker": "..\\..\\Users\\ROBDAI\\AppData\\Local\\Temp\\ab4c49fb-bcb7-4621-ab6e-bea03bba7c3b_FixedLoginProject.zip.c3b\\Models\\User.cs",
@@ -313,7 +309,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 33,
               "Title": "user.json",
               "DocumentMoniker": "C:\\Users\\ROBDAI\\AppData\\Local\\Temp\\243976c5-f160-4544-849a-2f4d2a35c779_FixedLoginProject.zip.779\\Data\\user.json",
               "RelativeDocumentMoniker": "..\\..\\Users\\ROBDAI\\AppData\\Local\\Temp\\243976c5-f160-4544-849a-2f4d2a35c779_FixedLoginProject.zip.779\\Data\\user.json",
@@ -331,7 +327,6 @@
               "RelativeDocumentMoniker": "..\\..\\Users\\ROBDAI\\AppData\\Local\\Temp\\95e39a11-54a2-47d2-abe1-eafa8cbb09f3_FixedLoginProject.zip.9f3\\Services\\IUserDataService.cs",
               "ToolTip": "C:\\Users\\ROBDAI\\AppData\\Local\\Temp\\95e39a11-54a2-47d2-abe1-eafa8cbb09f3_FixedLoginProject.zip.9f3\\Services\\IUserDataService.cs [Read Only]",
               "RelativeToolTip": "..\\..\\Users\\ROBDAI\\AppData\\Local\\Temp\\95e39a11-54a2-47d2-abe1-eafa8cbb09f3_FixedLoginProject.zip.9f3\\Services\\IUserDataService.cs [Read Only]",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-30T13:27:54.643Z",
               "EditorCaption": " [Read Only]"
@@ -344,62 +339,20 @@
               "RelativeDocumentMoniker": "..\\..\\Users\\ROBDAI\\AppData\\Local\\Temp\\1d0a2182-2b44-4343-b815-12d355acbdad_FixedLoginProject.zip.dad\\Services\\JsonUserDataService.cs",
               "ToolTip": "C:\\Users\\ROBDAI\\AppData\\Local\\Temp\\1d0a2182-2b44-4343-b815-12d355acbdad_FixedLoginProject.zip.dad\\Services\\JsonUserDataService.cs [Read Only]",
               "RelativeToolTip": "..\\..\\Users\\ROBDAI\\AppData\\Local\\Temp\\1d0a2182-2b44-4343-b815-12d355acbdad_FixedLoginProject.zip.dad\\Services\\JsonUserDataService.cs [Read Only]",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAwA8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-30T13:26:31.838Z",
               "EditorCaption": " [Read Only]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 31,
               "Title": "test_0y1c4ebe_wpftmp.sourcelink.json",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\obj\\Debug\\net8.0-windows\\test_0y1c4ebe_wpftmp.sourcelink.json",
               "RelativeDocumentMoniker": "test\\obj\\Debug\\net8.0-windows\\test_0y1c4ebe_wpftmp.sourcelink.json",
               "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\obj\\Debug\\net8.0-windows\\test_0y1c4ebe_wpftmp.sourcelink.json",
               "RelativeToolTip": "test\\obj\\Debug\\net8.0-windows\\test_0y1c4ebe_wpftmp.sourcelink.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-30T10:14:05.339Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IUserDataService.cs",
-              "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Services\\IUserDataService.cs",
-              "RelativeDocumentMoniker": "test\\Services\\IUserDataService.cs",
-              "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\Services\\IUserDataService.cs",
-              "RelativeToolTip": "test\\Services\\IUserDataService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T07:41:48.82Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "UserDataServiceFactory.cs",
-              "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\DataAccess\\UserDataServiceFactory.cs",
-              "RelativeDocumentMoniker": "test\\DataAccess\\UserDataServiceFactory.cs",
-              "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\DataAccess\\UserDataServiceFactory.cs",
-              "RelativeToolTip": "test\\DataAccess\\UserDataServiceFactory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T07:24:56.683Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "SqlUserDataService.cs",
-              "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\DataAccess\\SqlUserDataService.cs",
-              "RelativeDocumentMoniker": "test\\DataAccess\\SqlUserDataService.cs",
-              "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\DataAccess\\SqlUserDataService.cs",
-              "RelativeToolTip": "test\\DataAccess\\SqlUserDataService.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAqwEYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T07:24:23.324Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-30T10:14:05.339Z"
             },
             {
               "$type": "Document",
@@ -416,85 +369,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UserMigrationTool.cs",
-              "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Utilities\\UserMigrationTool.cs",
-              "RelativeDocumentMoniker": "test\\Utilities\\UserMigrationTool.cs",
-              "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\Utilities\\UserMigrationTool.cs",
-              "RelativeToolTip": "test\\Utilities\\UserMigrationTool.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T10:01:22.633Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "AppDbContextModelSnapshot.cs",
-              "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Migrations\\AppDbContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "test\\Migrations\\AppDbContextModelSnapshot.cs",
-              "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\Migrations\\AppDbContextModelSnapshot.cs",
-              "RelativeToolTip": "test\\Migrations\\AppDbContextModelSnapshot.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAhwCkAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T09:48:06.918Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "20250627093439_InitialCreate.cs",
-              "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Migrations\\20250627093439_InitialCreate.cs",
-              "RelativeDocumentMoniker": "test\\Migrations\\20250627093439_InitialCreate.cs",
-              "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\Migrations\\20250627093439_InitialCreate.cs",
-              "RelativeToolTip": "test\\Migrations\\20250627093439_InitialCreate.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAawBcAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T09:34:39.868Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "test\\Data\\AppDbContext.cs",
-              "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "test\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T09:24:14.112Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 22,
               "Title": "PasswordBoxHelper.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Helpers\\PasswordBoxHelper.cs",
               "RelativeDocumentMoniker": "test\\Helpers\\PasswordBoxHelper.cs",
               "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\Helpers\\PasswordBoxHelper.cs",
               "RelativeToolTip": "test\\Helpers\\PasswordBoxHelper.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAkwFoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-25T12:09:22.192Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 30,
               "Title": "test.deps.json",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\bin\\Debug\\net8.0-windows\\test.deps.json",
               "RelativeDocumentMoniker": "test\\bin\\Debug\\net8.0-windows\\test.deps.json",
               "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\bin\\Debug\\net8.0-windows\\test.deps.json",
               "RelativeToolTip": "test\\bin\\Debug\\net8.0-windows\\test.deps.json",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAIBZwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-25T09:58:26.76Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-25T09:58:26.76Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 34,
               "Title": "users.json",
               "DocumentMoniker": "C:\\GitHub\\Daniel\\LogIn Advanced\\test\\bin\\Debug\\net8.0-windows\\users.json",
               "RelativeDocumentMoniker": "..\\Daniel\\LogIn Advanced\\test\\bin\\Debug\\net8.0-windows\\users.json",
@@ -505,98 +405,96 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 8,
               "Title": "NavigationService.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Services\\NavigationService.cs",
               "RelativeDocumentMoniker": "test\\Services\\NavigationService.cs",
               "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\Services\\NavigationService.cs",
               "RelativeToolTip": "test\\Services\\NavigationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-25T08:40:34.817Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 1,
               "Title": "INavigationService.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Services\\INavigationService.cs",
               "RelativeDocumentMoniker": "test\\Services\\INavigationService.cs",
               "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\Services\\INavigationService.cs",
               "RelativeToolTip": "test\\Services\\INavigationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-25T08:39:53.722Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 25,
               "Title": "WelcomeViewModel.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\ViewModels\\WelcomeViewModel.cs",
               "RelativeDocumentMoniker": "test\\ViewModels\\WelcomeViewModel.cs",
               "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\ViewModels\\WelcomeViewModel.cs",
               "RelativeToolTip": "test\\ViewModels\\WelcomeViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T07:30:11.495Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-25T07:30:11.495Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 23,
               "Title": "RelayCommand.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Commands\\RelayCommand.cs",
               "RelativeDocumentMoniker": "test\\Commands\\RelayCommand.cs",
               "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\Commands\\RelayCommand.cs",
               "RelativeToolTip": "test\\Commands\\RelayCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-19T13:05:07.648Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 26,
               "Title": "RegisterViewModel.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\ViewModels\\RegisterViewModel.cs",
               "RelativeDocumentMoniker": "test\\ViewModels\\RegisterViewModel.cs",
               "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\ViewModels\\RegisterViewModel.cs",
               "RelativeToolTip": "test\\ViewModels\\RegisterViewModel.cs",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAmwIsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T13:04:04.889Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-19T13:04:04.889Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\ViewModels\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "test\\ViewModels\\LoginViewModel.cs",
               "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\ViewModels\\LoginViewModel.cs",
               "RelativeToolTip": "test\\ViewModels\\LoginViewModel.cs",
-              "ViewState": "AgIAAJkAAAAAAAAAAAAQwKYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-19T13:03:43.937Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\App.xaml.cs",
               "RelativeDocumentMoniker": "test\\App.xaml.cs",
               "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\App.xaml.cs",
               "RelativeToolTip": "test\\App.xaml.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAADwvzsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAmwDUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-19T07:43:17.742Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 12,
               "Title": "AssemblyInfo.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "test\\AssemblyInfo.cs",
@@ -609,7 +507,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 13,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\App.xaml",
               "RelativeDocumentMoniker": "test\\App.xaml",
@@ -621,7 +519,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 21,
               "Title": "Login Page.xaml",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\LogInPage\\Login Page.xaml",
               "RelativeDocumentMoniker": "test\\LogInPage\\Login Page.xaml",
@@ -633,72 +531,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 20,
               "Title": "Login Page.xaml.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\LogInPage\\Login Page.xaml.cs",
               "RelativeDocumentMoniker": "test\\LogInPage\\Login Page.xaml.cs",
               "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\LogInPage\\Login Page.xaml.cs",
               "RelativeToolTip": "test\\LogInPage\\Login Page.xaml.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAIwCEAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-18T10:16:21.747Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 17,
               "Title": "RegisterPage.xaml.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\RegisterPage\\RegisterPage.xaml.cs",
               "RelativeDocumentMoniker": "test\\RegisterPage\\RegisterPage.xaml.cs",
               "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\RegisterPage\\RegisterPage.xaml.cs",
               "RelativeToolTip": "test\\RegisterPage\\RegisterPage.xaml.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAASwB4AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-18T10:12:57.654Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "UserStorage.cs",
-              "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Models\\UserStorage.cs",
-              "RelativeDocumentMoniker": "test\\Models\\UserStorage.cs",
-              "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\Models\\UserStorage.cs",
-              "RelativeToolTip": "test\\Models\\UserStorage.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAuwDsAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T10:18:23.225Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Models\\User.cs",
-              "RelativeDocumentMoniker": "test\\Models\\User.cs",
-              "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\Models\\User.cs",
-              "RelativeToolTip": "test\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T11:27:08.497Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 14,
               "Title": "WelcomePage.xaml.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\WelcomePage\\WelcomePage.xaml.cs",
               "RelativeDocumentMoniker": "test\\WelcomePage\\WelcomePage.xaml.cs",
               "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\WelcomePage\\WelcomePage.xaml.cs",
               "RelativeToolTip": "test\\WelcomePage\\WelcomePage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-18T11:35:54.727Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 18,
               "Title": "RegisterPage.xaml",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\RegisterPage\\RegisterPage.xaml",
               "RelativeDocumentMoniker": "test\\RegisterPage\\RegisterPage.xaml",
@@ -710,20 +582,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 10,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "test\\MainWindow.xaml.cs",
               "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\MainWindow.xaml.cs",
               "RelativeToolTip": "test\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-18T11:36:51.309Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 15,
               "Title": "WelcomePage.xaml",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\WelcomePage\\WelcomePage.xaml",
               "RelativeDocumentMoniker": "test\\WelcomePage\\WelcomePage.xaml",
@@ -735,7 +607,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 11,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\MainWindow.xaml",
               "RelativeDocumentMoniker": "test\\MainWindow.xaml",
