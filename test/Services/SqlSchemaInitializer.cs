@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Data;
-using Microsoft.Data.SqlClient; // ✅ Recommended
+using Microsoft.Data.SqlClient;
 using System.Threading.Tasks;
 
 namespace test.Services

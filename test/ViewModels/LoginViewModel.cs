@@ -16,6 +16,9 @@ namespace test.ViewModels
         private string _statusMessage = string.Empty;
         private Brush _statusColor = Brushes.Red;
 
+        private int _failedAttempts = 0;
+        private const int MaxAttempts = 3;
+
         public string Username
         {
             get => _username;
@@ -57,7 +60,6 @@ namespace test.ViewModels
             if (string.IsNullOrWhiteSpace(Username) || string.IsNullOrWhiteSpace(Password))
             {
                 StatusMessage = "Username and password are required.";
-                LoginFinished?.Invoke(this, false);
                 return;
             }
 
@@ -65,7 +67,6 @@ namespace test.ViewModels
             if (userDataService == null)
             {
                 StatusMessage = "User service unavailable.";
-                LoginFinished?.Invoke(this, false);
                 return;
             }
 
@@ -75,12 +76,24 @@ namespace test.ViewModels
             {
                 StatusMessage = "Login successful.";
                 StatusColor = Brushes.Green;
+                _failedAttempts = 0;
                 LoginFinished?.Invoke(this, true);
             }
             else
             {
+                _failedAttempts++;
                 StatusMessage = "Invalid credentials.";
-                LoginFinished?.Invoke(this, false);
+
+                if (_failedAttempts >= MaxAttempts)
+                {
+                    StatusMessage = "Too many failed attempts. Application will close.";
+                    await Task.Delay(1500);
+                    System.Windows.Application.Current.Shutdown();
+                }
+                else
+                {
+                    LoginFinished?.Invoke(this, false);
+                }
             }
 
             await Task.Delay(1);

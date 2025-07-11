@@ -2,8 +2,8 @@
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.IO;
-using System.Threading.Tasks;
 using System.Windows;
+using test.DataAccess;
 using test.Services;
 
 namespace test
@@ -14,41 +14,40 @@ namespace test
 
         protected override void OnStartup(StartupEventArgs e)
         {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(AppContext.BaseDirectory)
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+            var config = LoadConfiguration();
 
-            IConfiguration config = builder.Build();
+            string? storage = config["AppSettings:Storage"];
+            string? connectionString = config["AppSettings:ConnectionString"];
 
             var services = new ServiceCollection();
 
-            string storage = config["AppSettings:Storage"] ?? "Json";
-            string connectionString = config["AppSettings:ConnectionString"] ?? "";
-
-            // Perform migration if switching to SQL
-            if (storage == "Sql")
+            if (string.Equals(storage, "Sql", StringComparison.OrdinalIgnoreCase))
             {
-                string jsonFilePath = Path.Combine(AppContext.BaseDirectory, "Data", "user.json");
-                if (File.Exists(jsonFilePath))
+                if (string.IsNullOrWhiteSpace(connectionString))
                 {
-                    DataMigrationService.MigrateJsonToSql(jsonFilePath, connectionString);
+                    MessageBox.Show("Missing SQL connection string.");
+                    Shutdown();
+                    return;
                 }
+
+                services.AddSingleton<IUserDataService>(new SqlUserDataService(connectionString));
             }
-
-            if (storage == "Manual")
+            else
             {
-                // Ensure DB and table exist
-                SqlSchemaInitializer.EnsureDatabaseAndSchemaAsync(connectionString).Wait(); // Synchronous wait for async method
-
-                services.AddSingleton<IUserDataService>(new ManualUserDataService(connectionString));
+                services.AddSingleton<IUserDataService, JsonUserDataService>();
             }
 
             ServiceProvider = services.BuildServiceProvider();
 
             base.OnStartup(e);
+        }
 
-            var mainWindow = new MainWindow();
-            mainWindow.Show();
+        private static IConfiguration LoadConfiguration()
+        {
+            return new ConfigurationBuilder()
+                .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .Build();
         }
     }
 }

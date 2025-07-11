@@ -8,6 +8,7 @@ using System.Windows.Media;
 using test.Commands;
 using test.Models;
 using test.Services;
+using test.DataAccess;
 
 namespace test.ViewModels
 {
@@ -97,8 +98,11 @@ namespace test.ViewModels
                 return;
             }
 
-            var hashedPassword = BCrypt.Net.BCrypt.HashPassword(Password);
-            var newUser = new UserModel { Username = Username, Password = hashedPassword };
+            var passwordToStore = userDataService is SqlUserDataService
+                ? BCrypt.Net.BCrypt.HashPassword(Password)
+                : Password;
+
+            var newUser = new UserModel { Username = Username, Password = passwordToStore };
 
             try
             {

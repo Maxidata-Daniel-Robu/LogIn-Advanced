@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR
 C:\GitHub\LogIn-Advanced\test\App.xaml
 4-411235720
 11413424753
-22749732908
+231540001624
 238-129223117
 LogInPage\Login Page.xaml;MainWindow.xaml;RegisterPage\RegisterPage.xaml;WelcomePage\WelcomePage.xaml;
 
-False
+True
 
