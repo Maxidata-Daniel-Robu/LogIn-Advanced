@@ -1,35 +1,19 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using test.LogInPage; // Required to access Login_Page
+using System.Windows.Navigation;
 
-namespace test
+namespace test.LogInPage
 {
-    public partial class RegisterPage : Page
+    public partial class Register_Page : Page
     {
-        public RegisterPage()
+        public Register_Page()
         {
             InitializeComponent();
         }
 
-        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        private void LoginLink_Click(object sender, RoutedEventArgs e)
         {
-            if (DataContext is ViewModels.RegisterViewModel viewModel)
-            {
-                viewModel.Password = ((PasswordBox)sender).Password;
-            }
-        }
-
-        private void ConfirmPasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
-        {
-            if (DataContext is ViewModels.RegisterViewModel viewModel)
-            {
-                viewModel.ConfirmPassword = ((PasswordBox)sender).Password;
-            }
-        }
-
-        private void BackToLogin_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService?.Navigate(new Login_Page()); // ✅ Correct class name
+            NavigationService?.Navigate(new Login_Page());
         }
     }
 }

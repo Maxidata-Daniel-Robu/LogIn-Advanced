@@ -12,13 +12,8 @@
       }
     ],
     "configProperties": {
-      "System.Reflection.NullabilityInfoContext.IsSupported": true,
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true,
-      "CSWINRT_USE_WINDOWS_UI_XAML_PROJECTIONS": false,
-      "app:storage": "Sql",
-      "app:connection": "Server=.\\maxidata;Database=UserAuthDB;Trusted_Connection=True;Encrypt=True;TrustServerCertificate=True;"
-
-
+      "CSWINRT_USE_WINDOWS_UI_XAML_PROJECTIONS": false
     }
   }
 }

@@ -1,24 +1,25 @@
-﻿using System;
-using System.ComponentModel;
-using System.Linq;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using test.Commands;
+using test.DataAccess;
 using test.Models;
 using test.Services;
-using test.DataAccess;
 
 namespace test.ViewModels
 {
     public class RegisterViewModel : INotifyPropertyChanged
     {
-        private string _username = string.Empty;
-        private string _password = string.Empty;
-        private string _confirmPassword = string.Empty;
-        private string _statusMessage = string.Empty;
-        private Brush _statusColor = Brushes.Red;
+        private string _username = "";
+        private string _password = "";
+        private string _confirmPassword = "";
+        private string _statusMessage = "";
+        private Brush _statusColor = Brushes.LightSteelBlue;
 
         public string Username
         {
@@ -51,31 +52,22 @@ namespace test.ViewModels
         }
 
         public ICommand RegisterCommand { get; }
-        public ICommand NavigateToLoginCommand { get; }
 
         public RegisterViewModel()
         {
-            RegisterCommand = new RelayCommand(async param => await ExecuteRegisterAsync(), _ => true);
-            NavigateToLoginCommand = new RelayCommand(_ =>
-            {
-                MainWindow.AppNavigationService.NavigateTo("Login");
-            });
+            RegisterCommand = new RelayCommand(async _ => await ExecuteRegisterAsync());
         }
 
         private async Task ExecuteRegisterAsync()
         {
-            StatusColor = Brushes.Red;
+            StatusColor = Brushes.OrangeRed;
             StatusMessage = "";
 
-            if (string.IsNullOrWhiteSpace(Username) || string.IsNullOrWhiteSpace(Password) || string.IsNullOrWhiteSpace(ConfirmPassword))
+            if (string.IsNullOrWhiteSpace(Username) ||
+                string.IsNullOrWhiteSpace(Password) ||
+                string.IsNullOrWhiteSpace(ConfirmPassword))
             {
                 StatusMessage = "All fields are required.";
-                return;
-            }
-
-            if (!IsPasswordValid(Password))
-            {
-                StatusMessage = "Password must contain an uppercase letter, number, and special character.";
                 return;
             }
 
@@ -85,53 +77,45 @@ namespace test.ViewModels
                 return;
             }
 
-            var userDataService = App.ServiceProvider?.GetService(typeof(IUserDataService)) as IUserDataService;
-            if (userDataService == null)
+            if (!Regex.IsMatch(Password, @"^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{6,}$"))
             {
-                StatusMessage = "User service is unavailable.";
+                StatusMessage = "Password must contain upper-case, number, special char.";
                 return;
             }
 
-            if (userDataService.UserExists(Username))
+            var jsonService = new JsonUserDataService();
+
+            if (await jsonService.UserExistsAsync(Username))
             {
-                StatusMessage = "Username already taken.";
+                StatusMessage = "Username already exists.";
                 return;
             }
 
-            var passwordToStore = userDataService is SqlUserDataService
-                ? BCrypt.Net.BCrypt.HashPassword(Password)
-                : Password;
-
-            var newUser = new UserModel { Username = Username, Password = passwordToStore };
-
-            try
+            bool ok = await jsonService.AddUserAsync(new UserModel
             {
-                userDataService.AddUser(newUser);
-                StatusMessage = "Registration successful!";
-                StatusColor = Brushes.Green;
+                Username = Username,
+                Password = Password
+            });
+
+            if (ok)
+            {
+                StatusColor = Brushes.LimeGreen;
+                StatusMessage = "Registration successful. Redirecting...";
                 await Task.Delay(500);
-                MainWindow.AppNavigationService.NavigateTo("Login");
+
+                // go to login page after success
+                if (Application.Current.MainWindow?.FindName("MainFrame") is Frame frame)
+                    frame.Navigate(new LogInPage.Login_Page());
             }
-            catch (Exception ex)
+            else
             {
-                StatusMessage = $"Registration failed: {ex.Message}";
+                StatusMessage = "Registration failed.";
             }
-
-            await Task.Delay(1);
         }
 
-        private static bool IsPasswordValid(string password)
-        {
-            return !string.IsNullOrWhiteSpace(password) &&
-                   password.Any(char.IsUpper) &&
-                   password.Any(char.IsDigit) &&
-                   password.Any(c => !char.IsLetterOrDigit(c));
-        }
+        private void OnPropertyChanged([CallerMemberName] string? name = null) =>
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
 
         public event PropertyChangedEventHandler? PropertyChanged;
-        protected void OnPropertyChanged([CallerMemberName] string? name = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        }
     }
 }

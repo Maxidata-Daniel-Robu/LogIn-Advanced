@@ -1,5 +1,6 @@
 ﻿using System.Windows.Input;
 using test.Commands;
+using test.Services;
 
 namespace test.ViewModels
 {
@@ -7,11 +8,11 @@ namespace test.ViewModels
     {
         public ICommand NavigateCommand { get; }
 
-        public WelcomeViewModel()
+        public WelcomeViewModel(INavigationService navigationService)
         {
             NavigateCommand = new RelayCommand(_ =>
             {
-                MainWindow.AppNavigationService.NavigateTo("Login");
+                navigationService.NavigateTo("Login");
             });
         }
     }

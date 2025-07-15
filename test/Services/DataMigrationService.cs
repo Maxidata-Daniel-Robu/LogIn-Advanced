@@ -1,6 +1,6 @@
-﻿using test.DataAccess;
+﻿using System;
+using test.DataAccess;
 using test.Models;
-using test.Services;
 
 namespace test.Services
 {
@@ -8,17 +8,19 @@ namespace test.Services
     {
         public static void MigrateJsonToSql(string jsonFilePath, string connectionString)
         {
-            // Load existing users from JSON
-            var jsonService = new JsonUserDataService();
-            var users = jsonService.GetAllUsers();
+            var jsonService = new JsonUserDataService(jsonFilePath);
+            var sqlService = new SqlUserDataService(connectionString);
 
-            // Insert users into SQL
-            var sqlService = new ManualUserDataService(connectionString);
+            var users = jsonService.GetAllUsersAsync().GetAwaiter().GetResult();
+
             foreach (var user in users)
             {
-                if (!sqlService.UserExists(user.Username))
+                bool exists = sqlService.UserExistsAsync(user.Username)
+                                       .GetAwaiter().GetResult();
+                if (!exists)
                 {
-                    sqlService.AddUser(user);
+                    sqlService.AddUserAsync(user)
+                              .GetAwaiter().GetResult();
                 }
             }
         }

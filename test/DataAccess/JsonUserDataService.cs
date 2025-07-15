@@ -1,7 +1,9 @@
-﻿using Newtonsoft.Json;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.Json;
+using System.Threading.Tasks;
 using test.Models;
 using test.Services;
 
@@ -9,44 +11,103 @@ namespace test.DataAccess
 {
     public class JsonUserDataService : IUserDataService
     {
-        private readonly string _filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "user.json");
+        private readonly string _filePath;
 
-        private List<UserModel> LoadUsers()
+        public JsonUserDataService()
+            : this(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "user.json")) { }
+
+        public JsonUserDataService(string filePath)
+        {
+            _filePath = Path.GetFullPath(filePath);
+        }
+
+        private static bool IsBCryptHash(string s) =>
+            s is { Length: > 4 } &&
+            (s.StartsWith("$2a$") || s.StartsWith("$2b$") || s.StartsWith("$2y$") || s.StartsWith("$2x$"));
+
+        public async Task<bool> AddUserAsync(UserModel user)
+        {
+            var users = await GetAllUsersAsync();
+            if (users.Any(u => u.Username == user.Username)) return false;
+
+            if (!IsBCryptHash(user.Password))
+                user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
+
+            users.Add(user);
+            await SaveUsersAsync(users);
+            return true;
+        }
+
+        public async Task<bool> DeleteUserAsync(string username)
+        {
+            var users = await GetAllUsersAsync();
+            var user = users.FirstOrDefault(u => u.Username == username);
+            if (user == null) return false;
+
+            users.Remove(user);
+            await SaveUsersAsync(users);
+            return true;
+        }
+
+        public async Task<bool> UpdateUserAsync(UserModel user)
+        {
+            var users = await GetAllUsersAsync();
+            var existingUser = users.FirstOrDefault(u => u.Username == user.Username);
+            if (existingUser == null) return false;
+
+            existingUser.Password = IsBCryptHash(user.Password)
+                ? user.Password
+                : BCrypt.Net.BCrypt.HashPassword(user.Password);
+
+            await SaveUsersAsync(users);
+            return true;
+        }
+
+        public async Task<List<UserModel>> GetAllUsersAsync()
         {
             if (!File.Exists(_filePath)) return new List<UserModel>();
-            var json = File.ReadAllText(_filePath);
-            return JsonConvert.DeserializeObject<List<UserModel>>(json) ?? new List<UserModel>();
+
+            var json = await File.ReadAllTextAsync(_filePath);
+            return JsonSerializer.Deserialize<List<UserModel>>(json) ?? new List<UserModel>();
         }
 
-        private void SaveUsers(List<UserModel> users)
+        public async Task<UserModel?> GetUserAsync(string username)
         {
-            var json = JsonConvert.SerializeObject(users, Formatting.Indented);
-            File.WriteAllText(_filePath, json);
+            var users = await GetAllUsersAsync();
+            return users.FirstOrDefault(u => u.Username == username);
         }
 
-        public void AddUser(UserModel user)
+        public async Task<bool> UserExistsAsync(string username)
         {
-            var users = LoadUsers();
-            users.Add(user);
-            SaveUsers(users);
+            var users = await GetAllUsersAsync();
+            return users.Any(u => u.Username == username);
         }
 
-        public bool UserExists(string username)
+        public async Task<bool> VerifyUserPasswordAsync(string username, string password)
         {
-            return LoadUsers().Any(u => u.Username == username);
+            var user = await GetUserAsync(username);
+            if (user == null) return false;
+
+            if (IsBCryptHash(user.Password))
+                return BCrypt.Net.BCrypt.Verify(password, user.Password);
+
+            if (password == user.Password)
+            {
+                await UpdateUserAsync(new UserModel
+                {
+                    Username = username,
+                    Password = BCrypt.Net.BCrypt.HashPassword(password)
+                });
+                return true;
+            }
+            return false;
         }
 
-        public bool VerifyUserPassword(string username, string password)
+        private async Task SaveUsersAsync(List<UserModel> users)
         {
-            var user = LoadUsers().FirstOrDefault(u => u.Username == username);
-            return user != null && BCrypt.Net.BCrypt.Verify(password, user.Password);
-        }
-
-        public List<UserModel> GetAllUsers() => LoadUsers();
-
-        public UserModel? GetUser(string username)
-        {
-            return LoadUsers().FirstOrDefault(u => u.Username == username);
+            Directory.CreateDirectory(Path.GetDirectoryName(_filePath)!);
+            var json = JsonSerializer.Serialize(users, new JsonSerializerOptions { WriteIndented = true });
+            await File.WriteAllTextAsync(_filePath, json);
         }
     }
 }

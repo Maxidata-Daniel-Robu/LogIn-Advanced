@@ -1,6 +1,5 @@
 ﻿using System.Windows;
 using test.Services;
-using test.ViewModels;
 
 namespace test
 {
@@ -12,7 +11,7 @@ namespace test
         {
             InitializeComponent();
             AppNavigationService = new NavigationService(MainFrame);
-            MainFrame.Navigate(new WelcomePage(MainFrame)); 
+            MainFrame.Navigate(new WelcomePage());
         }
     }
 }

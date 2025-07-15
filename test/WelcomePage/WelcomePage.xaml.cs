@@ -1,14 +1,15 @@
 ﻿using System.Windows.Controls;
+using test.Services;
 using test.ViewModels;
 
 namespace test
 {
     public partial class WelcomePage : Page
     {
-        public WelcomePage(Frame frame) 
+        public WelcomePage()
         {
             InitializeComponent();
-            DataContext = new WelcomeViewModel();
+            DataContext = new WelcomeViewModel(MainWindow.AppNavigationService);
         }
     }
 }

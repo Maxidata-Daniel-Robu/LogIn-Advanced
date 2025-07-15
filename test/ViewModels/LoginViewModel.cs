@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using test.Commands;
@@ -11,13 +12,11 @@ namespace test.ViewModels
 {
     public class LoginViewModel : INotifyPropertyChanged
     {
-        private string _username = string.Empty;
-        private string _password = string.Empty;
-        private string _statusMessage = string.Empty;
-        private Brush _statusColor = Brushes.Red;
-
-        private int _failedAttempts = 0;
-        private const int MaxAttempts = 3;
+        private string _username = "";
+        private string _password = "";
+        private string _statusMessage = "";
+        private Brush _statusColor = Brushes.LightSteelBlue;
+        private int _failedAttempts;
 
         public string Username
         {
@@ -46,20 +45,21 @@ namespace test.ViewModels
         public ICommand LoginCommand { get; }
 
         public event EventHandler<bool>? LoginFinished;
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         public LoginViewModel()
         {
-            LoginCommand = new RelayCommand(async _ => await ExecuteLoginAsync(), _ => true);
+            LoginCommand = new RelayCommand(async _ => await ExecuteLoginAsync());
         }
 
         private async Task ExecuteLoginAsync()
         {
-            StatusColor = Brushes.Red;
+            StatusColor = Brushes.LightSteelBlue;
             StatusMessage = "";
 
             if (string.IsNullOrWhiteSpace(Username) || string.IsNullOrWhiteSpace(Password))
             {
-                StatusMessage = "Username and password are required.";
+                StatusMessage = "All fields are required.";
                 return;
             }
 
@@ -70,39 +70,36 @@ namespace test.ViewModels
                 return;
             }
 
-            bool verified = userDataService.VerifyUserPassword(Username, Password);
+            bool verified = await userDataService.VerifyUserPasswordAsync(Username, Password);
 
             if (verified)
             {
                 StatusMessage = "Login successful.";
-                StatusColor = Brushes.Green;
+                StatusColor = Brushes.LimeGreen;
                 _failedAttempts = 0;
                 LoginFinished?.Invoke(this, true);
+                await Task.Delay(500);
+                Application.Current.Shutdown();
             }
             else
             {
                 _failedAttempts++;
                 StatusMessage = "Invalid credentials.";
+                StatusColor = Brushes.OrangeRed;
 
-                if (_failedAttempts >= MaxAttempts)
+                if (_failedAttempts >= 3)
                 {
-                    StatusMessage = "Too many failed attempts. Application will close.";
-                    await Task.Delay(1500);
-                    System.Windows.Application.Current.Shutdown();
+                    MessageBox.Show("Too many wrong tries. Application will now close.");
+                    Application.Current.Shutdown();
                 }
                 else
                 {
                     LoginFinished?.Invoke(this, false);
                 }
             }
-
-            await Task.Delay(1);
         }
 
-        public event PropertyChangedEventHandler? PropertyChanged;
-        protected void OnPropertyChanged([CallerMemberName] string? name = null)
-        {
+        private void OnPropertyChanged([CallerMemberName] string? name = null) =>
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        }
     }
 }
