@@ -52,7 +52,7 @@ namespace test.UserManagement {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/test;V1.0.0.0;component/welcomepage/welcomepage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/test;component/welcomepage/welcomepage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\WelcomePage\WelcomePage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
