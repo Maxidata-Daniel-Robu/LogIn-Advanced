@@ -20,16 +20,16 @@ namespace test.Services
                 case "Login":
                     _frame.Navigate(new Login_Page());
                     break;
-
                 case "Register":
                     _frame.Navigate(new Register_Page());
                     break;
-
+                case "UserManagement":
+                    _frame.Navigate(new UserManagement.UserManagementPage());
+                    break;
                 case "Welcome":
                 case "HomePage":
                     _frame.Navigate(new WelcomePage());
                     break;
-
                 default:
                     throw new ArgumentException($"No page found for key: {pageKey}", nameof(pageKey));
             }

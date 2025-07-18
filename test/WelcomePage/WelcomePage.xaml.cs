@@ -1,5 +1,4 @@
 ﻿using System.Windows.Controls;
-using test.Services;
 using test.ViewModels;
 
 namespace test

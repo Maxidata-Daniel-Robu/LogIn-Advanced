@@ -38,8 +38,7 @@ namespace test.DataAccess
         {
             using var conn = new SqlConnection(_connectionString);
             await conn.OpenAsync();
-            var cmd = new SqlCommand(
-                "DELETE FROM Users WHERE Username = @u", conn);
+            var cmd = new SqlCommand("DELETE FROM Users WHERE Username = @u", conn);
             cmd.Parameters.AddWithValue("@u", username);
             return await cmd.ExecuteNonQueryAsync() > 0;
         }
@@ -51,8 +50,7 @@ namespace test.DataAccess
 
             using var conn = new SqlConnection(_connectionString);
             await conn.OpenAsync();
-            var cmd = new SqlCommand(
-                "UPDATE Users SET Password = @p WHERE Username = @u", conn);
+            var cmd = new SqlCommand("UPDATE Users SET Password = @p WHERE Username = @u", conn);
             cmd.Parameters.AddWithValue("@u", user.Username);
             cmd.Parameters.AddWithValue("@p", user.Password);
             return await cmd.ExecuteNonQueryAsync() > 0;
@@ -63,8 +61,7 @@ namespace test.DataAccess
             var list = new List<UserModel>();
             using var conn = new SqlConnection(_connectionString);
             await conn.OpenAsync();
-            var cmd = new SqlCommand(
-                "SELECT Username, Password FROM Users", conn);
+            var cmd = new SqlCommand("SELECT Username, Password FROM Users", conn);
             using var rdr = await cmd.ExecuteReaderAsync();
             while (await rdr.ReadAsync())
             {
@@ -81,8 +78,7 @@ namespace test.DataAccess
         {
             using var conn = new SqlConnection(_connectionString);
             await conn.OpenAsync();
-            var cmd = new SqlCommand(
-                "SELECT COUNT(*) FROM Users WHERE Username = @u", conn);
+            var cmd = new SqlCommand("SELECT COUNT(*) FROM Users WHERE Username = @u", conn);
             cmd.Parameters.AddWithValue("@u", username);
             var result = await cmd.ExecuteScalarAsync();
             return result != null && Convert.ToInt32(result) > 0;
@@ -92,8 +88,7 @@ namespace test.DataAccess
         {
             using var conn = new SqlConnection(_connectionString);
             await conn.OpenAsync();
-            var cmd = new SqlCommand(
-                "SELECT Username, Password FROM Users WHERE Username = @u", conn);
+            var cmd = new SqlCommand("SELECT Username, Password FROM Users WHERE Username = @u", conn);
             cmd.Parameters.AddWithValue("@u", username);
             using var rdr = await cmd.ExecuteReaderAsync();
             if (await rdr.ReadAsync())
@@ -125,6 +120,55 @@ namespace test.DataAccess
                 return true;
             }
             return false;
+        }
+
+        // UserDisplayModel (UI binding-ready, no warning)
+        public class UserDisplayModel
+        {
+            public int Id { get; set; }
+            public string Username { get; set; } = string.Empty;
+            public string HashedPassword { get; set; } = string.Empty;
+            public string Description { get; set; } = string.Empty;
+        }
+
+        public async Task<List<UserDisplayModel>> GetAllUserDisplayModelsAsync()
+        {
+            var users = new List<UserDisplayModel>();
+            using var conn = new SqlConnection(_connectionString);
+            await conn.OpenAsync();
+            var cmd = new SqlCommand("SELECT Id, Username, Password, Description FROM Users", conn);
+            using var rdr = await cmd.ExecuteReaderAsync();
+            while (await rdr.ReadAsync())
+            {
+                users.Add(new UserDisplayModel
+                {
+                    Id = rdr.GetInt32(0),
+                    Username = rdr.GetString(1),
+                    HashedPassword = rdr.GetString(2),
+                    Description = rdr.IsDBNull(3) ? "" : rdr.GetString(3)
+                });
+            }
+            return users;
+        }
+
+        public async Task<bool> UpdateUserDescriptionAsync(int id, string description)
+        {
+            using var conn = new SqlConnection(_connectionString);
+            await conn.OpenAsync();
+            var cmd = new SqlCommand("UPDATE Users SET Description = @desc WHERE Id = @id", conn);
+            cmd.Parameters.AddWithValue("@desc", description);
+            cmd.Parameters.AddWithValue("@id", id);
+            return await cmd.ExecuteNonQueryAsync() > 0;
+        }
+
+        public async Task<string?> GetUsernameByIdAsync(int id)
+        {
+            using var conn = new SqlConnection(_connectionString);
+            await conn.OpenAsync();
+            var cmd = new SqlCommand("SELECT Username FROM Users WHERE Id = @id", conn);
+            cmd.Parameters.AddWithValue("@id", id);
+            var result = await cmd.ExecuteScalarAsync();
+            return result?.ToString();
         }
     }
 }

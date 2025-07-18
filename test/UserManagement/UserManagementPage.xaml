@@ -1,8 +1,13 @@
 ﻿<Page x:Class="test.UserManagement.UserManagementPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:vm="clr-namespace:test.ViewModels"
       Title="User Management"
       Background="#FF1E1E1E">
+
+    <Page.DataContext>
+        <vm:UserManagementViewModel />
+    </Page.DataContext>
 
     <Grid Margin="20">
         <StackPanel VerticalAlignment="Stretch">
@@ -14,41 +19,59 @@
                      FontSize="16"
                      Background="#FF2E2E2E"
                      Foreground="White"
-                     CaretBrush="White"
-                     Padding="5"/>
+                     Padding="5"
+                     BorderBrush="Gray"
+                     BorderThickness="1" />
 
             <!-- User DataGrid -->
             <DataGrid ItemsSource="{Binding FilteredUsers}"
+                      SelectedItem="{Binding SelectedUser, Mode=TwoWay}"
                       AutoGenerateColumns="False"
                       CanUserAddRows="False"
-                      Background="#FF23272E"
+                      Background="#FF2D2D30"
                       Foreground="White"
                       GridLinesVisibility="None"
-                      RowBackground="#FF35363A"
-                      AlternatingRowBackground="#FF45464A"
+                      RowBackground="#FF3E3E42"
+                      AlternatingRowBackground="#FF2D2D30"
                       HeadersVisibility="Column"
                       SelectionMode="Single"
                       SelectionUnit="FullRow"
                       IsReadOnly="False"
-                      Height="400"
-                      SelectedItem="{Binding SelectedUser, Mode=TwoWay}">
+                      FontSize="14"
+                      Height="400" SelectionChanged="DataGrid_SelectionChanged">
+
+                <!-- Header Style -->
                 <DataGrid.ColumnHeaderStyle>
                     <Style TargetType="DataGridColumnHeader">
-                        <Setter Property="Background" Value="#FF23272E"/>
+                        <Setter Property="Background" Value="#FF1E1E1E"/>
                         <Setter Property="Foreground" Value="White"/>
                         <Setter Property="FontWeight" Value="Bold"/>
-                        <Setter Property="FontSize" Value="15"/>
+                        <Setter Property="FontSize" Value="14"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
                     </Style>
                 </DataGrid.ColumnHeaderStyle>
+
+                <!-- Cell Style -->
+                <DataGrid.CellStyle>
+                    <Style TargetType="DataGridCell">
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="FontSize" Value="14"/>
+                        <Setter Property="BorderBrush" Value="#444"/>
+                    </Style>
+                </DataGrid.CellStyle>
+
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID"
                                         Binding="{Binding Id}"
-                                        IsReadOnly="True"/>
+                                        IsReadOnly="True"
+                                        Width="50" />
                     <DataGridTextColumn Header="Hashed Password"
                                         Binding="{Binding HashedPassword}"
-                                        IsReadOnly="True"/>
+                                        IsReadOnly="True"
+                                        Width="*" />
                     <DataGridTextColumn Header="Description"
-                                        Binding="{Binding Description, UpdateSourceTrigger=PropertyChanged}"/>
+                                        Binding="{Binding Description, UpdateSourceTrigger=PropertyChanged}"
+                                        Width="2*" />
                 </DataGrid.Columns>
             </DataGrid>
 
@@ -61,13 +84,14 @@
                         Background="#FF007ACC"
                         Foreground="White"
                         Width="150"
-                        Height="36"/>
+                        Height="36"
+                        FontWeight="SemiBold"/>
             </StackPanel>
 
             <!-- Selected Username -->
             <TextBlock Text="{Binding SelectedUsername}"
                        FontWeight="Bold"
-                       Foreground="#FF43E1FF"
+                       Foreground="LightSteelBlue"
                        FontSize="16"
                        Margin="0,15,0,0"/>
         </StackPanel>

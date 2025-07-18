@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\GitHub\LogIn-Advanced\test\App.xaml
-4-411235720
+51610273363
 
-22-1399869477
+241207022714
 2242046154150
-LogInPage\Login Page.xaml;MainWindow.xaml;RegisterPage\RegisterPage.xaml;WelcomePage\WelcomePage.xaml;
+LogInPage\Login Page.xaml;MainWindow.xaml;RegisterPage\RegisterPage.xaml;UserManagement\UserManagementPage.xaml;WelcomePage\WelcomePage.xaml;
 
-False
+True
 

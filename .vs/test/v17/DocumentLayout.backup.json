@@ -3,48 +3,84 @@
   "WorkspaceRootPath": "C:\\GitHub\\LogIn-Advanced\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GitHub\\LogIn-Advanced\\test\\bin\\Debug\\net8.0-windows\\Data\\user.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:test\\bin\\Debug\\net8.0-windows\\Data\\user.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GitHub\\LogIn-Advanced\\test\\bin\\Debug\\net8.0-windows\\Data\\user.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:test\\bin\\Debug\\net8.0-windows\\Data\\user.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\viewmodels\\usermanagementviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\viewmodels\\usermanagementviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\viewmodels\\welcomeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\viewmodels\\welcomeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\welcomepage\\welcomepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\welcomepage\\welcomepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\usermanagement\\usermanagementpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\usermanagement\\usermanagementpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\usermanagement\\usermanagementpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\usermanagement\\usermanagementpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\services\\navigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\services\\navigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\registerpage\\registerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\registerpage\\registerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\dataaccess\\jsonuserdataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\dataaccess\\jsonuserdataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\registerpage\\registerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\registerpage\\registerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\services\\inavigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\services\\inavigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\welcomepage\\welcomepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\welcomepage\\welcomepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\loginpage\\login page.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\loginpage\\login page.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GitHub\\LogIn-Advanced\\test\\obj\\Debug\\net8.0-windows\\WelcomePage\\WelcomePage.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:test\\obj\\Debug\\net8.0-windows\\WelcomePage\\WelcomePage.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\services\\navigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\services\\navigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\dataaccess\\sqluserdataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\dataaccess\\sqluserdataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\dataaccess\\jsonuserdataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\dataaccess\\jsonuserdataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\services\\sqlschemainitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\services\\sqlschemainitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GitHub\\LogIn-Advanced\\test\\bin\\Debug\\net8.0-windows\\test.runtimeconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:test\\bin\\Debug\\net8.0-windows\\test.runtimeconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\registerpage\\registerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\registerpage\\registerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\services\\inavigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\services\\inavigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\loginpage\\login page.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\loginpage\\login page.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\loginpage\\login page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -67,14 +103,6 @@
       "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\welcomepage\\welcomepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\welcomepage\\welcomepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\welcomepage\\welcomepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\welcomepage\\welcomepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -93,18 +121,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\services\\manualuserdataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\services\\manualuserdataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\viewmodels\\welcomeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\viewmodels\\welcomeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GitHub\\LogIn-Advanced\\test\\bin\\Debug\\net8.0-windows\\test.runtimeconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:test\\bin\\Debug\\net8.0-windows\\test.runtimeconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\services\\sqlschemainitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|solutionrelative:test\\services\\sqlschemainitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2B55879-A237-48DC-A81B-3008B6F55079}|test\\test.csproj|c:\\github\\login-advanced\\test\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -167,31 +183,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\appsettings.json",
               "RelativeDocumentMoniker": "test\\appsettings.json",
-              "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\appsettings.json*",
-              "RelativeToolTip": "test\\appsettings.json*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABAAAAAAAAAAA==",
+              "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\appsettings.json",
+              "RelativeToolTip": "test\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-07-01T14:49:43.889Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "user.json",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\bin\\Debug\\net8.0-windows\\Data\\user.json",
               "RelativeDocumentMoniker": "test\\bin\\Debug\\net8.0-windows\\Data\\user.json",
               "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\bin\\Debug\\net8.0-windows\\Data\\user.json",
               "RelativeToolTip": "test\\bin\\Debug\\net8.0-windows\\Data\\user.json",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAEUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAEUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-06-27T14:06:50.31Z",
               "IsPinned": true,
@@ -199,20 +214,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 16,
               "Title": "test.runtimeconfig.json",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\bin\\Debug\\net8.0-windows\\test.runtimeconfig.json",
               "RelativeDocumentMoniker": "test\\bin\\Debug\\net8.0-windows\\test.runtimeconfig.json",
               "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\bin\\Debug\\net8.0-windows\\test.runtimeconfig.json",
               "RelativeToolTip": "test\\bin\\Debug\\net8.0-windows\\test.runtimeconfig.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-07-08T12:33:37.146Z",
               "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 12,
+              "Title": "WelcomePage.g.cs",
+              "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\obj\\Debug\\net8.0-windows\\WelcomePage\\WelcomePage.g.cs",
+              "RelativeDocumentMoniker": "test\\obj\\Debug\\net8.0-windows\\WelcomePage\\WelcomePage.g.cs",
+              "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\obj\\Debug\\net8.0-windows\\WelcomePage\\WelcomePage.g.cs",
+              "RelativeToolTip": "test\\obj\\Debug\\net8.0-windows\\WelcomePage\\WelcomePage.g.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAIwEUAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T09:30:06.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserManagementViewModel.cs",
+              "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\ViewModels\\UserManagementViewModel.cs",
+              "RelativeDocumentMoniker": "test\\ViewModels\\UserManagementViewModel.cs",
+              "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\ViewModels\\UserManagementViewModel.cs",
+              "RelativeToolTip": "test\\ViewModels\\UserManagementViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T09:09:11.544Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserManagementPage.xaml.cs",
+              "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\UserManagement\\UserManagementPage.xaml.cs",
+              "RelativeDocumentMoniker": "test\\UserManagement\\UserManagementPage.xaml.cs",
+              "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\UserManagement\\UserManagementPage.xaml.cs",
+              "RelativeToolTip": "test\\UserManagement\\UserManagementPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T09:08:42.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserManagementPage.xaml",
+              "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\UserManagement\\UserManagementPage.xaml",
+              "RelativeDocumentMoniker": "test\\UserManagement\\UserManagementPage.xaml",
+              "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\UserManagement\\UserManagementPage.xaml",
+              "RelativeToolTip": "test\\UserManagement\\UserManagementPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-15T09:08:30.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "SqlSchemaInitializer.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Services\\SqlSchemaInitializer.cs",
               "RelativeDocumentMoniker": "test\\Services\\SqlSchemaInitializer.cs",
@@ -224,7 +286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 29,
               "Title": "ManualUserDataService.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Services\\ManualUserDataService.cs",
               "RelativeDocumentMoniker": "test\\Services\\ManualUserDataService.cs",
@@ -236,7 +298,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 22,
               "Title": "DataMigrationService.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Services\\DataMigrationService.cs",
               "RelativeDocumentMoniker": "test\\Services\\DataMigrationService.cs",
@@ -244,12 +306,11 @@
               "RelativeToolTip": "test\\Services\\DataMigrationService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-14T08:15:06.065Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-14T08:15:06.065Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "UserModel.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Models\\UserModel.cs",
               "RelativeDocumentMoniker": "test\\Models\\UserModel.cs",
@@ -261,7 +322,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 33,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "C:\\Users\\ROBDAI\\AppData\\Local\\SourceServer\\eafc63de67f5dcca194218b581af761677400c8da6a0991e6ff74866b06bddec\\test\\ViewModels\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "..\\..\\Users\\ROBDAI\\AppData\\Local\\SourceServer\\eafc63de67f5dcca194218b581af761677400c8da6a0991e6ff74866b06bddec\\test\\ViewModels\\LoginViewModel.cs",
@@ -273,20 +334,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "SqlUserDataService.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\DataAccess\\SqlUserDataService.cs",
               "RelativeDocumentMoniker": "test\\DataAccess\\SqlUserDataService.cs",
               "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\DataAccess\\SqlUserDataService.cs",
               "RelativeToolTip": "test\\DataAccess\\SqlUserDataService.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAiwIIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAiwK0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T12:56:03.292Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T12:56:03.292Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 34,
               "Title": "UserMigrationTool.cs",
               "DocumentMoniker": "C:\\Users\\ROBDAI\\AppData\\Local\\SourceServer\\5c31c05f5df22eae8045e50a3b2e2ab0c4ff7b140a1586c0f7151ba74c55e6bc\\test\\Utilities\\UserMigrationTool.cs",
               "RelativeDocumentMoniker": "..\\..\\Users\\ROBDAI\\AppData\\Local\\SourceServer\\5c31c05f5df22eae8045e50a3b2e2ab0c4ff7b140a1586c0f7151ba74c55e6bc\\test\\Utilities\\UserMigrationTool.cs",
@@ -298,7 +358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 35,
               "Title": "users.json",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\bin\\Debug\\net8.0-windows\\users.json",
               "RelativeDocumentMoniker": "test\\bin\\Debug\\net8.0-windows\\users.json",
@@ -310,7 +370,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 28,
               "Title": "IUserDataService.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Services\\IUserDataService.cs",
               "RelativeDocumentMoniker": "test\\Services\\IUserDataService.cs",
@@ -322,7 +382,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 37,
               "Title": "20250708123830_SyncModel.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Migrations\\20250708123830_SyncModel.cs",
               "RelativeDocumentMoniker": "test\\Migrations\\20250708123830_SyncModel.cs",
@@ -333,7 +393,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 27,
               "Title": "test.csproj",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\test.csproj",
               "RelativeDocumentMoniker": "test\\test.csproj",
@@ -345,7 +405,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 36,
               "Title": "test",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\test.csproj",
               "RelativeDocumentMoniker": "test\\test.csproj",
@@ -356,7 +416,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 40,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\ROBDAI\\AppData\\Local\\Temp\\ab4c49fb-bcb7-4621-ab6e-bea03bba7c3b_FixedLoginProject.zip.c3b\\Models\\User.cs",
               "RelativeDocumentMoniker": "..\\..\\Users\\ROBDAI\\AppData\\Local\\Temp\\ab4c49fb-bcb7-4621-ab6e-bea03bba7c3b_FixedLoginProject.zip.c3b\\Models\\User.cs",
@@ -367,7 +427,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 41,
               "Title": "user.json",
               "DocumentMoniker": "C:\\Users\\ROBDAI\\AppData\\Local\\Temp\\243976c5-f160-4544-849a-2f4d2a35c779_FixedLoginProject.zip.779\\Data\\user.json",
               "RelativeDocumentMoniker": "..\\..\\Users\\ROBDAI\\AppData\\Local\\Temp\\243976c5-f160-4544-849a-2f4d2a35c779_FixedLoginProject.zip.779\\Data\\user.json",
@@ -378,7 +438,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 44,
               "Title": "IUserDataService.cs",
               "DocumentMoniker": "C:\\Users\\ROBDAI\\AppData\\Local\\Temp\\95e39a11-54a2-47d2-abe1-eafa8cbb09f3_FixedLoginProject.zip.9f3\\Services\\IUserDataService.cs",
               "RelativeDocumentMoniker": "..\\..\\Users\\ROBDAI\\AppData\\Local\\Temp\\95e39a11-54a2-47d2-abe1-eafa8cbb09f3_FixedLoginProject.zip.9f3\\Services\\IUserDataService.cs",
@@ -389,7 +449,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 43,
               "Title": "JsonUserDataService.cs",
               "DocumentMoniker": "C:\\Users\\ROBDAI\\AppData\\Local\\Temp\\1d0a2182-2b44-4343-b815-12d355acbdad_FixedLoginProject.zip.dad\\Services\\JsonUserDataService.cs",
               "RelativeDocumentMoniker": "..\\..\\Users\\ROBDAI\\AppData\\Local\\Temp\\1d0a2182-2b44-4343-b815-12d355acbdad_FixedLoginProject.zip.dad\\Services\\JsonUserDataService.cs",
@@ -400,7 +460,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 39,
               "Title": "test_0y1c4ebe_wpftmp.sourcelink.json",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\obj\\Debug\\net8.0-windows\\test_0y1c4ebe_wpftmp.sourcelink.json",
               "RelativeDocumentMoniker": "test\\obj\\Debug\\net8.0-windows\\test_0y1c4ebe_wpftmp.sourcelink.json",
@@ -411,7 +471,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "JsonUserDataService.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\DataAccess\\JsonUserDataService.cs",
               "RelativeDocumentMoniker": "test\\DataAccess\\JsonUserDataService.cs",
@@ -419,12 +479,11 @@
               "RelativeToolTip": "test\\DataAccess\\JsonUserDataService.cs",
               "ViewState": "AgIAAFUAAAAAAAAAAAA8wHEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T07:18:38.05Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-30T07:18:38.05Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 31,
               "Title": "PasswordBoxHelper.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Helpers\\PasswordBoxHelper.cs",
               "RelativeDocumentMoniker": "test\\Helpers\\PasswordBoxHelper.cs",
@@ -436,7 +495,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 38,
               "Title": "test.deps.json",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\bin\\Debug\\net8.0-windows\\test.deps.json",
               "RelativeDocumentMoniker": "test\\bin\\Debug\\net8.0-windows\\test.deps.json",
@@ -448,7 +507,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 42,
               "Title": "users.json",
               "DocumentMoniker": "C:\\GitHub\\Daniel\\LogIn Advanced\\test\\bin\\Debug\\net8.0-windows\\users.json",
               "RelativeDocumentMoniker": "..\\Daniel\\LogIn Advanced\\test\\bin\\Debug\\net8.0-windows\\users.json",
@@ -459,20 +518,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 13,
               "Title": "NavigationService.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Services\\NavigationService.cs",
               "RelativeDocumentMoniker": "test\\Services\\NavigationService.cs",
               "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\Services\\NavigationService.cs",
               "RelativeToolTip": "test\\Services\\NavigationService.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAYwAIAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAmwCYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T08:40:34.817Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-25T08:40:34.817Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 18,
               "Title": "INavigationService.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Services\\INavigationService.cs",
               "RelativeDocumentMoniker": "test\\Services\\INavigationService.cs",
@@ -480,24 +538,23 @@
               "RelativeToolTip": "test\\Services\\INavigationService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T08:39:53.722Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-25T08:39:53.722Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 3,
               "Title": "WelcomeViewModel.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\ViewModels\\WelcomeViewModel.cs",
               "RelativeDocumentMoniker": "test\\ViewModels\\WelcomeViewModel.cs",
               "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\ViewModels\\WelcomeViewModel.cs",
               "RelativeToolTip": "test\\ViewModels\\WelcomeViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-25T07:30:11.495Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 32,
               "Title": "RelayCommand.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\Commands\\RelayCommand.cs",
               "RelativeDocumentMoniker": "test\\Commands\\RelayCommand.cs",
@@ -509,20 +566,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "RegisterViewModel.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\ViewModels\\RegisterViewModel.cs",
               "RelativeDocumentMoniker": "test\\ViewModels\\RegisterViewModel.cs",
               "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\ViewModels\\RegisterViewModel.cs",
               "RelativeToolTip": "test\\ViewModels\\RegisterViewModel.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAiwHkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T13:04:04.889Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-19T13:04:04.889Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\ViewModels\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "test\\ViewModels\\LoginViewModel.cs",
@@ -530,12 +586,11 @@
               "RelativeToolTip": "test\\ViewModels\\LoginViewModel.cs",
               "ViewState": "AgIAAE8AAAAAAAAAAAAiwGkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T13:03:43.937Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-19T13:03:43.937Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 21,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\App.xaml.cs",
               "RelativeDocumentMoniker": "test\\App.xaml.cs",
@@ -543,12 +598,11 @@
               "RelativeToolTip": "test\\App.xaml.cs",
               "ViewState": "AgIAADcAAAAAAAAAAAAIwFMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T07:43:17.742Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-19T07:43:17.742Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 26,
               "Title": "AssemblyInfo.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "test\\AssemblyInfo.cs",
@@ -560,31 +614,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 23,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\App.xaml",
               "RelativeDocumentMoniker": "test\\App.xaml",
               "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\App.xaml",
               "RelativeToolTip": "test\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-18T12:00:02.925Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-18T12:00:02.925Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 20,
               "Title": "Login Page.xaml",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\LogInPage\\Login Page.xaml",
               "RelativeDocumentMoniker": "test\\LogInPage\\Login Page.xaml",
               "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\LogInPage\\Login Page.xaml",
               "RelativeToolTip": "test\\LogInPage\\Login Page.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-18T10:24:45.319Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-18T10:24:45.319Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 19,
               "Title": "Login Page.xaml.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\LogInPage\\Login Page.xaml.cs",
               "RelativeDocumentMoniker": "test\\LogInPage\\Login Page.xaml.cs",
@@ -592,12 +644,11 @@
               "RelativeToolTip": "test\\LogInPage\\Login Page.xaml.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAowBsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T10:16:21.747Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-18T10:16:21.747Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 17,
               "Title": "RegisterPage.xaml.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\RegisterPage\\RegisterPage.xaml.cs",
               "RelativeDocumentMoniker": "test\\RegisterPage\\RegisterPage.xaml.cs",
@@ -605,36 +656,34 @@
               "RelativeToolTip": "test\\RegisterPage\\RegisterPage.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T10:12:57.654Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-18T10:12:57.654Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 4,
               "Title": "WelcomePage.xaml.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\WelcomePage\\WelcomePage.xaml.cs",
               "RelativeDocumentMoniker": "test\\WelcomePage\\WelcomePage.xaml.cs",
               "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\WelcomePage\\WelcomePage.xaml.cs",
               "RelativeToolTip": "test\\WelcomePage\\WelcomePage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-18T11:35:54.727Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "RegisterPage.xaml",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\RegisterPage\\RegisterPage.xaml",
               "RelativeDocumentMoniker": "test\\RegisterPage\\RegisterPage.xaml",
               "ToolTip": "C:\\GitHub\\LogIn-Advanced\\test\\RegisterPage\\RegisterPage.xaml",
               "RelativeToolTip": "test\\RegisterPage\\RegisterPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-18T11:28:44.721Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-18T11:28:44.721Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 25,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "test\\MainWindow.xaml.cs",
@@ -646,7 +695,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 10,
               "Title": "WelcomePage.xaml",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\WelcomePage\\WelcomePage.xaml",
               "RelativeDocumentMoniker": "test\\WelcomePage\\WelcomePage.xaml",
@@ -657,7 +706,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 24,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\GitHub\\LogIn-Advanced\\test\\MainWindow.xaml",
               "RelativeDocumentMoniker": "test\\MainWindow.xaml",
@@ -665,6 +714,14 @@
               "RelativeToolTip": "test\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-06-18T11:28:43.338Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }
