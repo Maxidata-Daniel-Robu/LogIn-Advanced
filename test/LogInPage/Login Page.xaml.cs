@@ -1,6 +1,5 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Navigation;
 using test.ViewModels;
 
 namespace test.LogInPage
@@ -10,12 +9,7 @@ namespace test.LogInPage
         public Login_Page()
         {
             InitializeComponent();
-            // XAML already provides DataContext via Page.DataContext
-        }
-
-        private void RegisterLink_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService?.Navigate(new Register_Page());
+            DataContext = new LoginViewModel(MainWindow.AppNavigationService);
         }
 
         private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)

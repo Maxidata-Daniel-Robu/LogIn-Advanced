@@ -3,76 +3,84 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:vm="clr-namespace:test.ViewModels"
       xmlns:helpers="clr-namespace:test.Helpers"
-      Title="LoginPage">
+      Title="LoginPage"
+      Background="#FF1E1E1E">
 
-    <Page.DataContext>
-        <vm:LoginViewModel/>
-    </Page.DataContext>
-
-    <Grid Background="#FF1E1E1E">
+    <Grid>
         <StackPanel VerticalAlignment="Center"
-                    HorizontalAlignment="Center"
-                    Width="300"
-                    Margin="20">
+                HorizontalAlignment="Center"
+                Width="300"
+                Margin="20">
+
+            <!-- Back to Welcome -->
+            <Button Content="← Back"
+                HorizontalAlignment="Left"
+                Grid.Column="0"
+                Width="80"
+                Height="36"
+                Background="#FF007ACC"
+                Foreground="White"
+                FontSize="14"
+                Command="{Binding NavigateBackCommand}"
+                Cursor="Hand" RenderTransformOrigin="-1.338,0.53"/>
 
             <!-- Title -->
             <TextBlock Text="Login"
-                       FontSize="28"
-                       Foreground="White"
-                       HorizontalAlignment="Center"
-                       Margin="0,0,0,20"/>
+                 FontSize="28"
+                 Foreground="White"
+                 HorizontalAlignment="Center"
+                 Margin="0,0,0,20"/>
 
             <!-- Username -->
             <TextBlock Text="Username"
-                       Foreground="LightGray"
-                       Margin="5,0,0,2"/>
-            <TextBox Height="36"
-                     Margin="0,0,0,10"
-                     FontSize="16"
-                     Background="#FF2E2E2E"
-                     Foreground="White"
-                     Padding="5,6"
-                     Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"/>
+                 Foreground="LightGray"
+                 Margin="5,0,0,2"/>
+            <TextBox Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"
+               Height="36"
+               Margin="0,0,0,10"
+               FontSize="16"
+               Background="#FF2E2E2E"
+               Foreground="White"
+               Padding="5,6"/>
 
             <!-- Password -->
             <TextBlock Text="Password"
-                       Foreground="LightGray"
-                       Margin="5,0,0,2"/>
+                 Foreground="LightGray"
+                 Margin="5,0,0,2"/>
             <PasswordBox helpers:PasswordBoxHelper.AttachBehavior="True"
-                         helpers:PasswordBoxHelper.BoundPassword="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                         Height="36"
-                         Margin="0,0,0,10"
-                         FontSize="16"
-                         Background="#FF2E2E2E"
-                         Foreground="White"
-                         Padding="5,6"/>
+                   helpers:PasswordBoxHelper.BoundPassword="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                   Height="36"
+                   Margin="0,0,0,10"
+                   FontSize="16"
+                   Background="#FF2E2E2E"
+                   Foreground="White"
+                   Padding="5,6"/>
 
-            <!-- Login Button -->
+            <!-- Login -->
             <Button Content="Login"
-                    Width="200"
-                    Height="40"
-                    Background="#FF007ACC"
-                    Foreground="White"
-                    FontSize="16"
-                    Margin="0,10,0,10"
-                    Command="{Binding LoginCommand}"/>
+              Width="200"
+              Height="40"
+              Background="#FF007ACC"
+              Foreground="White"
+              FontSize="16"
+              Margin="0,10,0,10"
+              Command="{Binding LoginCommand}"/>
 
-            <!-- Status Message -->
-            <TextBlock x:Name="StatusTextBlock"
-                       Text="{Binding StatusMessage}"
-                       Foreground="{Binding StatusColor}"
-                       FontWeight="Bold"
-                       Margin="0,10,0,0"
-                       TextWrapping="Wrap"
-                       HorizontalAlignment="Center"/>
+            <!-- Status -->
+            <TextBlock Text="{Binding StatusMessage}"
+                 Foreground="{Binding StatusColor}"
+                 FontWeight="Bold"
+                 Margin="0,10,0,0"
+                 TextWrapping="Wrap"
+                 HorizontalAlignment="Center"/>
 
-            <!-- Register Link -->
+            <!-- Go to Register -->
             <TextBlock HorizontalAlignment="Center"
-                       Foreground="White"
-                       Margin="0,20,0,0">
-                <Hyperlink Click="RegisterLink_Click">
-                    Don't have an account? <Run Text="Register here"/>
-                </Hyperlink>
+                 Foreground="White"
+                 Margin="0,20,0,0">
+        <Hyperlink Command="{Binding NavigateToRegisterCommand}">
+          Don’t have an account? <Run Text="Register here"/>
+        </Hyperlink>
             </TextBlock>
 
         </StackPanel>

@@ -12,11 +12,14 @@ namespace test.ViewModels
 {
     public class LoginViewModel : INotifyPropertyChanged
     {
+        private readonly INavigationService _navigationService;
+        private readonly IUserDataService _userDataService;
+        private int _failedAttempts;
+
         private string _username = "";
         private string _password = "";
         private string _statusMessage = "";
         private Brush _statusColor = Brushes.LightSteelBlue;
-        private int _failedAttempts;
 
         public string Username
         {
@@ -43,17 +46,30 @@ namespace test.ViewModels
         }
 
         public ICommand LoginCommand { get; }
+        public ICommand NavigateBackCommand { get; }
+        public ICommand NavigateToRegisterCommand { get; }
 
-        public event EventHandler<bool>? LoginFinished;
         public event PropertyChangedEventHandler? PropertyChanged;
 
-        public LoginViewModel()
+        // Constructor now takes your navigation service
+        public LoginViewModel(INavigationService navigationService)
         {
+            _navigationService = navigationService
+                ?? throw new ArgumentNullException(nameof(navigationService));
+
+            // Resolve data service from DI
+            _userDataService = App.ServiceProvider.GetService(typeof(IUserDataService))
+                               as IUserDataService
+                               ?? throw new InvalidOperationException("UserDataService not registered");
+
             LoginCommand = new RelayCommand(async _ => await ExecuteLoginAsync());
+            NavigateBackCommand = new RelayCommand(_ => _navigationService.NavigateTo("Welcome"));
+            NavigateToRegisterCommand = new RelayCommand(_ => _navigationService.NavigateTo("Register"));
         }
 
         private async Task ExecuteLoginAsync()
         {
+            // reset status styling
             StatusColor = Brushes.LightSteelBlue;
             StatusMessage = "";
 
@@ -63,23 +79,19 @@ namespace test.ViewModels
                 return;
             }
 
-            var userDataService = App.ServiceProvider?.GetService(typeof(IUserDataService)) as IUserDataService;
-            if (userDataService == null)
-            {
-                StatusMessage = "User service unavailable.";
-                return;
-            }
-
-            bool verified = await userDataService.VerifyUserPasswordAsync(Username, Password);
+            bool verified = await _userDataService.VerifyUserPasswordAsync(Username, Password);
 
             if (verified)
             {
                 StatusMessage = "Login successful.";
                 StatusColor = Brushes.LimeGreen;
                 _failedAttempts = 0;
-                LoginFinished?.Invoke(this, true);
+
+                // small pause so user sees message
                 await Task.Delay(500);
-                Application.Current.Shutdown();
+
+                // then navigate or shut down
+                _navigationService.NavigateTo("HomePage");
             }
             else
             {
@@ -91,10 +103,6 @@ namespace test.ViewModels
                 {
                     MessageBox.Show("Too many wrong tries. Application will now close.");
                     Application.Current.Shutdown();
-                }
-                else
-                {
-                    LoginFinished?.Invoke(this, false);
                 }
             }
         }

@@ -1,20 +1,20 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using test.Commands;
-using test.DataAccess;
-using test.Models;
 using test.Services;
 
 namespace test.ViewModels
 {
     public class RegisterViewModel : INotifyPropertyChanged
     {
+        private readonly INavigationService _navigationService;
+        private readonly IUserDataService _userDataService;
+
         private string _username = "";
         private string _password = "";
         private string _confirmPassword = "";
@@ -52,15 +52,28 @@ namespace test.ViewModels
         }
 
         public ICommand RegisterCommand { get; }
+        public ICommand NavigateBackCommand { get; }
+        public ICommand NavigateToLoginCommand { get; }
 
-        public RegisterViewModel()
+        public event PropertyChangedEventHandler? PropertyChanged;
+
+        public RegisterViewModel(INavigationService navigationService)
         {
+            _navigationService = navigationService
+                ?? throw new ArgumentNullException(nameof(navigationService));
+
+            _userDataService = App.ServiceProvider
+                               .GetService(typeof(IUserDataService)) as IUserDataService
+                               ?? throw new InvalidOperationException("UserDataService not registered.");
+
             RegisterCommand = new RelayCommand(async _ => await ExecuteRegisterAsync());
+            NavigateBackCommand = new RelayCommand(_ => _navigationService.NavigateTo("Welcome"));
+            NavigateToLoginCommand = new RelayCommand(_ => _navigationService.NavigateTo("Login"));
         }
 
         private async Task ExecuteRegisterAsync()
         {
-            StatusColor = Brushes.OrangeRed;
+            StatusColor = Brushes.LightSteelBlue;
             StatusMessage = "";
 
             if (string.IsNullOrWhiteSpace(Username) ||
@@ -74,48 +87,32 @@ namespace test.ViewModels
             if (Password != ConfirmPassword)
             {
                 StatusMessage = "Passwords do not match.";
+                StatusColor = Brushes.OrangeRed;
                 return;
             }
 
-            if (!Regex.IsMatch(Password, @"^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{6,}$"))
-            {
-                StatusMessage = "Password must contain upper-case, number, special char.";
-                return;
-            }
-
-            var jsonService = new JsonUserDataService();
-
-            if (await jsonService.UserExistsAsync(Username))
-            {
-                StatusMessage = "Username already exists.";
-                return;
-            }
-
-            bool ok = await jsonService.AddUserAsync(new UserModel
+            // your existing complexity checks...
+            bool added = await _userDataService.AddUserAsync(new Models.UserModel
             {
                 Username = Username,
                 Password = Password
             });
 
-            if (ok)
+            if (added)
             {
+                StatusMessage = "Registration successful.";
                 StatusColor = Brushes.LimeGreen;
-                StatusMessage = "Registration successful. Redirecting...";
                 await Task.Delay(500);
-
-                // go to login page after success
-                if (Application.Current.MainWindow?.FindName("MainFrame") is Frame frame)
-                    frame.Navigate(new LogInPage.Login_Page());
+                _navigationService.NavigateTo("Login");
             }
             else
             {
-                StatusMessage = "Registration failed.";
+                StatusMessage = "Username already exists.";
+                StatusColor = Brushes.OrangeRed;
             }
         }
 
         private void OnPropertyChanged([CallerMemberName] string? name = null) =>
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-
-        public event PropertyChangedEventHandler? PropertyChanged;
     }
 }

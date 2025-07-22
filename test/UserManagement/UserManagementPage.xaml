@@ -4,29 +4,40 @@
       Title="User Management"
       Background="#FF1E1E1E">
 
-    <!-- DataContext is set in code-behind -->
-
     <Grid Margin="20">
-        <StackPanel VerticalAlignment="Stretch">
+        <StackPanel VerticalAlignment="Top">
+
+            <!-- Back to Welcome -->
+            <Button Content="← Back"
+              HorizontalAlignment="Left"
+              Width="80"
+              Margin="0,0,0,10"
+              Command="{Binding NavigateBackCommand}" />
 
             <!-- Search Bar -->
             <TextBox Text="{Binding SearchQuery, UpdateSourceTrigger=PropertyChanged}"
-                     Height="32" Margin="0,0,0,10"
-                     FontSize="16" Background="#FF2E2E2E"
-                     Foreground="White" Padding="5"
-                     BorderBrush="Gray" BorderThickness="1"/>
+               Height="32"
+               Margin="0,0,0,10"
+               FontSize="16"
+               Background="#FF2E2E2E"
+               Foreground="White"
+               Padding="5"
+               BorderBrush="Gray"
+               BorderThickness="1"/>
 
-            <!-- DataGrid -->
+            <!-- Editable Users Table -->
             <DataGrid ItemsSource="{Binding FilteredUsers}"
-                      SelectedItem="{Binding SelectedUser, Mode=TwoWay}"
-                      AutoGenerateColumns="False" CanUserAddRows="False"
-                      Background="#FF2D2D30" Foreground="White"
-                      GridLinesVisibility="None"
-                      RowBackground="#FF3E3E42"
-                      AlternatingRowBackground="#FF2D2D30"
-                      HeadersVisibility="Column"
-                      SelectionMode="Single" SelectionUnit="FullRow"
-                      IsReadOnly="False" FontSize="14" Height="400">
+                SelectedItem="{Binding SelectedUser, Mode=TwoWay}"
+                AutoGenerateColumns="False"
+                CanUserAddRows="False"
+                Background="#FF2D2D30"
+                Foreground="White"
+                GridLinesVisibility="None"
+                RowBackground="#FF3E3E42"
+                AlternatingRowBackground="#FF2D2D30"
+                FontSize="14"
+                Height="300"
+                Margin="0,0,0,10">
 
                 <DataGrid.ColumnHeaderStyle>
                     <Style TargetType="DataGridColumnHeader">
@@ -40,45 +51,85 @@
 
                 <DataGrid.CellStyle>
                     <Style TargetType="DataGridCell">
-                        <Setter Property="Foreground"  Value="White"/>
-                        <Setter Property="FontSize"    Value="14"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="FontSize" Value="14"/>
                         <Setter Property="BorderBrush" Value="#444"/>
                     </Style>
                 </DataGrid.CellStyle>
 
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID"
-                                        Binding="{Binding Id}"
-                                        Width="50"  IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Hashed Password"
-                                        Binding="{Binding HashedPassword}"
-                                        Width="*"   IsReadOnly="True"/>
+                              Binding="{Binding Id}"
+                              Width="50"
+                              IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Username"
+                              Binding="{Binding Username, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                              Width="*"/>
+                    <DataGridTextColumn Header="Password"
+                              Binding="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                              Width="*"/>
                     <DataGridTextColumn Header="Description"
-                                        Binding="{Binding Description, UpdateSourceTrigger=PropertyChanged}"
-                                        Width="2*"/>
+                              Binding="{Binding Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                              Width="2*"/>
                 </DataGrid.Columns>
             </DataGrid>
 
-            <!-- Buttons -->
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+            <!-- Refresh & Save -->
+            <StackPanel Orientation="Horizontal"
+                  HorizontalAlignment="Right"
+                  Margin="0,0,0,10">
                 <Button Content="Refresh"
-            Command="{Binding RefreshCommand}"
-            Width="100" Height="36"
-            Background="#FF007ACC" Foreground="White"
-            Margin="0,0,8,0"/>
-
-                <Button Content="Save Descriptions"
-            Command="{Binding SaveDescriptionsCommand}"
-            Width="150" Height="36"
-            Background="#FF007ACC" Foreground="White"/>
+                Command="{Binding RefreshCommand}"
+                Width="100"
+                Height="36"
+                Background="#FF007ACC"
+                Foreground="White"
+                Margin="0,0,8,0"/>
+                <Button Content="Save Changes"
+                Command="{Binding SaveChangesCommand}"
+                Width="150"
+                Height="36"
+                Background="#FF007ACC"
+                Foreground="White"/>
             </StackPanel>
 
-            <!-- Selected Username -->
-            <TextBlock Text="{Binding SelectedUsername}"
-                       FontWeight="Bold"
-                       Foreground="LightSteelBlue"
-                       FontSize="16"
-                       Margin="0,15,0,0"/>
+            <!-- Insert & Delete -->
+            <StackPanel Orientation="Horizontal"
+                  HorizontalAlignment="Left">
+                <TextBox Width="140"
+                 Margin="0,0,8,0"
+                 FontSize="14"
+                 Background="#FF2E2E2E"
+                 Foreground="White"
+                 Padding="4"
+                 Text="{Binding NewUsername, UpdateSourceTrigger=PropertyChanged}"
+                 ToolTip="New Username"/>
+
+                <TextBox Width="140"
+                 Margin="0,0,8,0"
+                 FontSize="14"
+                 Background="#FF2E2E2E"
+                 Foreground="White"
+                 Padding="4"
+                 Text="{Binding NewPassword, UpdateSourceTrigger=PropertyChanged}"
+                 ToolTip="New Password"/>
+
+                <Button Content="Add User"
+                Command="{Binding AddUserCommand}"
+                Width="100"
+                Height="36"
+                Background="#FF007ACC"
+                Foreground="White"
+                Margin="0,0,8,0"/>
+
+                <Button Content="Delete Selected"
+                Command="{Binding DeleteSelectedCommand}"
+                Width="120"
+                Height="36"
+                Background="#FFCC0000"
+                Foreground="White"/>
+            </StackPanel>
+
         </StackPanel>
     </Grid>
 </Page>

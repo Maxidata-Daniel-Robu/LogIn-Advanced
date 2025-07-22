@@ -1,127 +1,83 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
+using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.Data.SqlClient;
 using test.Models;
+using test.Services;
 
 namespace test.Services
 {
     public class ManualUserDataService : IUserDataService
     {
-        private readonly string _connectionString;
+        // In-memory storage for manual/testing
+        private readonly List<UserModel> _users = new();
 
-        public ManualUserDataService(string connectionString)
+        public Task<bool> AddUserAsync(UserModel user)
         {
-            _connectionString = connectionString;
+            if (_users.Any(u => u.Username == user.Username))
+                return Task.FromResult(false);
+
+            user.Id = _users.Any() ? _users.Max(u => u.Id) + 1 : 1;
+            _users.Add(user);
+            return Task.FromResult(true);
         }
 
-        public async Task<bool> AddUserAsync(UserModel user)
+        public Task<bool> DeleteUserAsync(string username)
         {
-            using var connection = new SqlConnection(_connectionString);
-            await connection.OpenAsync();
-
-            var command = new SqlCommand("INSERT INTO Users (Username, Password) VALUES (@Username, @Password)", connection);
-            command.Parameters.AddWithValue("@Username", user.Username);
-            command.Parameters.AddWithValue("@Password", user.Password);
-
-            int result = await command.ExecuteNonQueryAsync();
-            return result > 0;
+            var user = _users.FirstOrDefault(u => u.Username == username);
+            if (user == null) return Task.FromResult(false);
+            _users.Remove(user);
+            return Task.FromResult(true);
         }
 
-        public async Task<bool> DeleteUserAsync(string username)
+        public Task<bool> UpdateUserAsync(UserModel user)
         {
-            using var connection = new SqlConnection(_connectionString);
-            await connection.OpenAsync();
+            var existing = _users.FirstOrDefault(u => u.Id == user.Id);
+            if (existing == null) return Task.FromResult(false);
 
-            var command = new SqlCommand("DELETE FROM Users WHERE Username = @Username", connection);
-            command.Parameters.AddWithValue("@Username", username);
-
-            int result = await command.ExecuteNonQueryAsync();
-            return result > 0;
+            existing.Username = user.Username;
+            existing.Password = user.Password;
+            existing.Description = user.Description;
+            return Task.FromResult(true);
         }
 
-        public async Task<bool> UpdateUserAsync(UserModel user)
+        public Task<List<UserModel>> GetAllUsersAsync()
         {
-            using var connection = new SqlConnection(_connectionString);
-            await connection.OpenAsync();
-
-            var command = new SqlCommand("UPDATE Users SET Password = @Password WHERE Username = @Username", connection);
-            command.Parameters.AddWithValue("@Username", user.Username);
-            command.Parameters.AddWithValue("@Password", user.Password);
-
-            int result = await command.ExecuteNonQueryAsync();
-            return result > 0;
+            // Return a deep clone if needed; for now, shallow copy
+            return Task.FromResult(_users.ToList());
         }
 
-        public async Task<List<UserModel>> GetAllUsersAsync()
+        public Task<UserModel?> GetUserAsync(string username)
         {
-            var users = new List<UserModel>();
-
-            using var connection = new SqlConnection(_connectionString);
-            await connection.OpenAsync();
-
-            var command = new SqlCommand("SELECT Username, Password FROM Users", connection);
-            using var reader = await command.ExecuteReaderAsync();
-
-            while (await reader.ReadAsync())
-            {
-                users.Add(new UserModel
-                {
-                    Username = reader.GetString(0),
-                    Password = reader.GetString(1)
-                });
-            }
-
-            return users;
+            var user = _users.FirstOrDefault(u => u.Username == username);
+            return Task.FromResult(user);
         }
 
-        public async Task<bool> UserExistsAsync(string username)
+        public Task<bool> UserExistsAsync(string username)
         {
-            using var connection = new SqlConnection(_connectionString);
-            await connection.OpenAsync();
-
-            var command = new SqlCommand("SELECT COUNT(*) FROM Users WHERE Username = @Username", connection);
-            command.Parameters.AddWithValue("@Username", username);
-
-            var result = await command.ExecuteScalarAsync();
-            return result != null && Convert.ToInt32(result) > 0;
+            bool exists = _users.Any(u => u.Username == username);
+            return Task.FromResult(exists);
         }
 
-        public async Task<UserModel?> GetUserAsync(string username)
+        public Task<bool> VerifyUserPasswordAsync(string username, string password)
         {
-            using var connection = new SqlConnection(_connectionString);
-            await connection.OpenAsync();
-
-            var command = new SqlCommand("SELECT Username, Password FROM Users WHERE Username = @Username", connection);
-            command.Parameters.AddWithValue("@Username", username);
-
-            using var reader = await command.ExecuteReaderAsync();
-
-            if (await reader.ReadAsync())
-            {
-                return new UserModel
-                {
-                    Username = reader.GetString(0),
-                    Password = reader.GetString(1)
-                };
-            }
-
-            return null;
+            var user = _users.FirstOrDefault(u => u.Username == username);
+            if (user == null) return Task.FromResult(false);
+            bool ok = user.Password == password;
+            return Task.FromResult(ok);
         }
 
-        public async Task<bool> VerifyUserPasswordAsync(string username, string password)
+        // -------------------------
+        // Newly added to satisfy IUserDataService
+        // -------------------------
+        public Task<bool> UpdateUserDescriptionAsync(int id, string description)
         {
-            using var connection = new SqlConnection(_connectionString);
-            await connection.OpenAsync();
+            var existing = _users.FirstOrDefault(u => u.Id == id);
+            if (existing == null)
+                return Task.FromResult(false);
 
-            var command = new SqlCommand("SELECT Password FROM Users WHERE Username = @Username", connection);
-            command.Parameters.AddWithValue("@Username", username);
-
-            var result = await command.ExecuteScalarAsync();
-            var storedHash = result as string;
-
-            return storedHash != null && BCrypt.Net.BCrypt.Verify(password, storedHash);
+            existing.Description = description;
+            return Task.FromResult(true);
         }
     }
 }
