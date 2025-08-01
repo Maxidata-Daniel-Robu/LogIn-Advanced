@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿// File: ViewModels/UserManagementViewModel.cs
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -8,6 +8,7 @@ using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using Microsoft.Extensions.Configuration;
 using test.Commands;
 using test.DataAccess;
 using test.Models;
@@ -27,6 +28,7 @@ namespace test.ViewModels
 
         private string _newUsername = string.Empty;
         private string _newPassword = string.Empty;
+        private string _newDescription = string.Empty;
 
         public ObservableCollection<UserModel> FilteredUsers
         {
@@ -58,10 +60,17 @@ namespace test.ViewModels
             set { _newPassword = value; OnPropertyChanged(); }
         }
 
+        public string NewDescription
+        {
+            get => _newDescription;
+            set { _newDescription = value; OnPropertyChanged(); }
+        }
+
         public ICommand RefreshCommand { get; }
         public ICommand SaveChangesCommand { get; }
         public ICommand AddUserCommand { get; }
         public ICommand DeleteSelectedCommand { get; }
+        public ICommand AddDescriptionCommand { get; }
         public ICommand NavigateBackCommand { get; }
 
         public UserManagementViewModel(INavigationService navigationService)
@@ -69,7 +78,6 @@ namespace test.ViewModels
             _navigationService = navigationService
                 ?? throw new ArgumentNullException(nameof(navigationService));
 
-            // choose JSON or SQL based on settings
             var config = App.ServiceProvider.GetService(typeof(IConfiguration))
                          as IConfiguration
                          ?? throw new InvalidOperationException("Configuration not available");
@@ -85,15 +93,12 @@ namespace test.ViewModels
             SaveChangesCommand = new RelayCommand(async _ => await SaveChangesAsync());
             AddUserCommand = new RelayCommand(async _ => await AddUserAsync());
             DeleteSelectedCommand = new RelayCommand(async _ => await DeleteAsync());
+            AddDescriptionCommand = new RelayCommand(async _ => await AddDescriptionAsync());
             NavigateBackCommand = new RelayCommand(_ => _navigationService.NavigateTo("Welcome"));
 
-            // initial load
             _ = RefreshAsync();
         }
 
-        /// <summary>
-        /// Load all users into both collections.
-        /// </summary>
         public async Task RefreshAsync()
         {
             var list = await _userService.GetAllUsersAsync();
@@ -104,9 +109,7 @@ namespace test.ViewModels
         private void FilterUsers()
         {
             if (string.IsNullOrWhiteSpace(SearchQuery))
-            {
                 FilteredUsers = new ObservableCollection<UserModel>(_users);
-            }
             else
             {
                 var q = SearchQuery.ToLower();
@@ -118,48 +121,30 @@ namespace test.ViewModels
             }
         }
 
-        /// <summary>
-        /// Save ALL changes: for each filtered user, update via single UpdateUserAsync.
-        /// </summary>
         private async Task SaveChangesAsync()
         {
             foreach (var u in FilteredUsers)
-            {
                 await _userService.UpdateUserAsync(u);
-            }
 
-            MessageBox.Show(
-                "All changes saved.",
-                "Success",
-                MessageBoxButton.OK,
-                MessageBoxImage.Information);
-
+            MessageBox.Show("All changes saved.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
             await RefreshAsync();
         }
 
-        /// <summary>
-        /// Insert a new user with the provided username & password.
-        /// </summary>
         private async Task AddUserAsync()
         {
             if (string.IsNullOrWhiteSpace(NewUsername) ||
                 string.IsNullOrWhiteSpace(NewPassword))
             {
-                MessageBox.Show(
-                    "Enter both username and password",
-                    "Validation",
-                    MessageBoxButton.OK,
-                    MessageBoxImage.Warning);
+                MessageBox.Show("Enter both username and password", "Validation", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
-            var added = await _userService.AddUserAsync(
-                new UserModel
-                {
-                    Username = NewUsername,
-                    Password = NewPassword,
-                    Description = ""
-                });
+            var added = await _userService.AddUserAsync(new UserModel
+            {
+                Username = NewUsername,
+                Password = NewPassword,
+                Description = ""
+            });
 
             MessageBox.Show(
                 added ? "User inserted" : "Username exists",
@@ -175,18 +160,11 @@ namespace test.ViewModels
             }
         }
 
-        /// <summary>
-        /// Delete the selected user after confirmation.
-        /// </summary>
         private async Task DeleteAsync()
         {
             if (SelectedUser == null)
             {
-                MessageBox.Show(
-                    "Select a user first",
-                    "Validation",
-                    MessageBoxButton.OK,
-                    MessageBoxImage.Warning);
+                MessageBox.Show("Select a user first", "Validation", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
@@ -199,7 +177,6 @@ namespace test.ViewModels
             if (answer != MessageBoxResult.Yes) return;
 
             var deleted = await _userService.DeleteUserAsync(SelectedUser.Username);
-
             MessageBox.Show(
                 deleted ? "User deleted" : "Delete failed",
                 "Delete",
@@ -209,9 +186,37 @@ namespace test.ViewModels
             if (deleted) await RefreshAsync();
         }
 
-        public event PropertyChangedEventHandler? PropertyChanged;
+        private async Task AddDescriptionAsync()
+        {
+            if (SelectedUser == null)
+            {
+                MessageBox.Show("Select a user first", "Validation", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(NewDescription))
+            {
+                MessageBox.Show("Enter a description", "Validation", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
 
-        private void OnPropertyChanged([CallerMemberName] string? n = null) =>
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(n));
+            SelectedUser.Description = NewDescription;
+            var updated = await _userService.UpdateUserDescriptionAsync(SelectedUser.Id, NewDescription);
+
+            MessageBox.Show(
+                updated ? "Description added" : "Failed to add description",
+                "Add Description",
+                MessageBoxButton.OK,
+                updated ? MessageBoxImage.Information : MessageBoxImage.Error);
+
+            if (updated)
+            {
+                NewDescription = "";
+                await RefreshAsync();
+            }
+        }
+
+        public event PropertyChangedEventHandler? PropertyChanged;
+        private void OnPropertyChanged([CallerMemberName] string? n = null)
+            => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(n));
     }
 }
