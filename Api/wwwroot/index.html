@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login API</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.9.0/swagger-ui.css" integrity="sha512-+dIOqN1CLRtVlpNzc10uAlbKDVlZG9hVSa5YKAGX4OojmcGxDFkhhjYUz7DtwKgOEy3TsC4+k9P0LAbB4Q6+xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="swagger-ui"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.9.0/swagger-ui-bundle.js" integrity="sha512-1OCatgGYG+ZwFsS3iMSXl7j+8I38bYT2v76sFPaYtulrSczXGr0C+MEY0S8mV+4CSkiUbSSjMBDuNIQP5CKVYQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        window.onload = () => {
+            SwaggerUIBundle({
+                url: 'swagger.json',
+                dom_id: '#swagger-ui'
+            });
+        };
+    </script>
+</body>
+</html>

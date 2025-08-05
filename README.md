@@ -18,7 +18,7 @@ cd Api
 dotnet run
 ```
 
-When running in development the API serves Swagger UI at `http://localhost:5000/swagger`.
+When running, the API serves a static OpenAPI document with Swagger UI at `http://localhost:5000/`.
 
 ## Available Endpoints
 

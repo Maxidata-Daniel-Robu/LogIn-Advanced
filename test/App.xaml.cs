@@ -23,6 +23,7 @@ namespace test
 
             string storage = config["AppSettings:Storage"] ?? "Json";
             string connStr = config["AppSettings:ConnectionString"] ?? string.Empty;
+            string apiBase = config["AppSettings:ApiBaseUrl"] ?? "http://localhost:5000";
             string jsonFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "user.json");
 
             // 2. If SQL is requested, try to migrate JSON → SQL first
@@ -67,6 +68,11 @@ namespace test
             {
                 services.AddSingleton<IUserDataService>(
                     _ => new SqlUserDataService(connStr));
+            }
+            else if (storage.Equals("Api", StringComparison.OrdinalIgnoreCase))
+            {
+                services.AddSingleton<IUserDataService>(
+                    _ => new ApiUserDataService(apiBase));
             }
             else
             {

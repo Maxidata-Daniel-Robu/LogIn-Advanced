@@ -22,16 +22,11 @@ else
     builder.Services.AddSingleton<IUserDataService>(_ => new JsonUserDataService(jsonFile));
 }
 
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+// Serve static OpenAPI definition and UI
+app.UseDefaultFiles();
+app.UseStaticFiles();
 
 app.MapPost("/login", async (IUserDataService svc, UserModel creds) =>
 {

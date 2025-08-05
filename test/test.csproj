@@ -14,11 +14,14 @@
 		<!-- Dependency Injection container -->
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
 
-		<!-- ADO.NET SQL client -->
-		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.3" />
+                <!-- ADO.NET SQL client -->
+                <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.3" />
 
-		<!-- JSON serialization – upgraded to pick up latest security patches -->
-		<PackageReference Include="System.Text.Json" Version="8.0.5" />
+                <!-- JSON serialization – upgraded to pick up latest security patches -->
+                <PackageReference Include="System.Text.Json" Version="8.0.5" />
+
+                <!-- HTTP + JSON helpers for calling the Web API -->
+                <PackageReference Include="System.Net.Http.Json" Version="8.0.0" />
 
 		<!-- BCrypt password hashing -->
 		<PackageReference Include="BCrypt.Net-Next" Version="4.0.2" />
